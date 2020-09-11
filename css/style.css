@@ -92,9 +92,9 @@ nav ul li {
     right: 20px;
     z-index: 9;
     display: none;
-  }
-  
-  .chat-header {
+}
+
+.chat-header {
     background-color: #b3abff;
     border-radius: 10px;
     font: normal normal 600 18px var(--text-font-primary);
@@ -105,34 +105,35 @@ nav ul li {
     grid-template-columns: .7fr .3fr;
     align-items: center;
 
-  }
+}
 
-  .chat-header-p-div,
-  .chat-header-btn-div {
-      margin: 0px;
-      padding: 0px;
-      justify-self: center;
-  }
-  
-  .chat-header-btn {
-      border: none;
-      outline: none;
-      background-color: transparent;
-      width: 30px;
-      height: 30px;
-  }
+.chat-header-p-div,
+.chat-header-btn-div {
+    margin: 0px;
+    padding: 0px;
+    justify-self: center;
+}
 
-  
-  .chat-screen {
+.chat-header-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+}
+
+
+.chat-screen {
     width: 230px;
     height: 250px;
     background-color: white;
     margin-left: 10px;
     overflow: scroll;
+    margin-top: 5px;
     border-radius: 10px;
-  }
-  
-  .chat-box {
+}
+
+.chat-box {
     width: 230px;
     height: 40px;
     background-color: white;
@@ -141,28 +142,28 @@ nav ul li {
     display: grid;
     grid-template-columns: .8fr .2fr;
     border-radius: 10px;
-  }
-  
-  .chat-box-text {
+}
+
+.chat-box-text {
     box-sizing: border-box;
     width: 100%;
     border: none;
     resize: none;
     outline: none;
-    padding:  5px;
+    padding: 5px;
     font-size: 10px;
-  }
-  
-  .chat-box-button {
+}
+
+.chat-box-button {
     width: 100%;
     height: 100%;
     border: none;
     outline: none;
     background-color: #124F3F;
     color: white;
-  }
-  
-  .chat-screen-text-input{
+}
+
+.chat-screen-text-input {
     box-sizing: border-box;
     width: 190px;
     height: 50px;
@@ -174,9 +175,9 @@ nav ul li {
     margin: 5px;
     padding-right: 5px;
     background-color: #FFF7AB;
-  }
-  
-  .chat-screen-text-output{
+}
+
+.chat-screen-text-output {
     box-sizing: border-box;
     border-radius: 10px;
     width: 200px;
@@ -188,7 +189,7 @@ nav ul li {
     margin: 5px;
     margin-left: 10px;
     background-color: #00000033;
-  }
+}
 
 .btn::before {
     content: '';
@@ -493,7 +494,7 @@ img {
 
 .feature-div-1-list,
 .feature-div-2-list,
-.feature-div-3-list{
+.feature-div-3-list {
     text-align: center;
     font: normal normal 600 22px/44px Poppins;
     letter-spacing: 0px;
@@ -530,7 +531,7 @@ img {
 .feature-div-1-list-2,
 .feature-div-1-list-4,
 .feature-div-2-list-2,
-.feature-div-2-list-4  {
+.feature-div-2-list-4 {
 
     opacity: 0.3;
 
@@ -539,7 +540,7 @@ img {
 .feature-div-1-list-5,
 .feature-div-1-list-1,
 .feature-div-2-list-5,
-.feature-div-2-list-1  {
+.feature-div-2-list-1 {
     opacity: 0.2;
 }
 
@@ -698,6 +699,115 @@ img {
     background-color: transparent;
     border: solid;
     border-width: 1.5px;
+}
+
+
+
+.register-div-form {
+    text-align: start;
+
+}
+
+.register-form-btn {
+    background-color: transparent;
+    border: solid;
+    border-color: var(--text-color-primary-dark);
+}
+
+.register-form-heading-2 {
+    margin-top: -15px;
+    font-size: 12px;
+}
+
+.register-form,
+.register-succ {
+    padding: 5px 0px 10px 0px;
+}
+
+.register-succ {
+    display: none;
+}
+
+#registerEmail {
+    width: 95%;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin-left: 2px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+#registerName {
+    width: 95%;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin-left: 2px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+
+.register-form-div-email,
+.register-form-div-name {
+    border: solid;
+    border-width: 1.5px;
+    border-radius: 20px;
+    position: relative;
+    margin: 20px;
+}
+
+.register-form-div-message {
+    height: 70px;
+    margin-top: 15px;
+}
+
+
+.register-form-label {
+    position: absolute;
+    bottom: 37px;
+    left: 20px;
+    background-color: #E2FEF6;
+    font: normal normal normal 14px var(--text-font-primary);
+}
+
+.register-form-div-role-p {
+
+    font: normal normal normal 12px var(--text-font-primary);
+}
+
+.register-form-div-checkbox-label {
+    font: normal normal normal 14px var(--text-font-primary);
+}
+
+.register-form-div-btn {
+    margin-top: 10px;
+    border: solid;
+    border-width: 1.5px;
+    font: normal normal 600 14px var(--text-font-primary);
+    background-color: var(--text-color-primary-dark);
+    color: #ffffff;
+}
+
+.register-succ-btn {
+    font: normal normal 600 14px var(--text-font-primary);
+    background-color: var(--text-color-primary-dark);
+    color: #ffffff;
+}
+
+.register-succ-btn:hover,
+.register-succ-btn:active {
+    font: normal normal 600 14px var(--text-font-primary);
+    background-color: var(--text-color-primary-light);
+    color: #000000;
+}
+
+.register-header-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-left: 250px;
 }
 
 .footer-items {
@@ -943,6 +1053,12 @@ img {
         color: #ffffff;
     }
 
+    .pricing-btn:hover,
+    .pricing-btn:active {
+        background-color: var(--text-color-primary-light);
+        color: var(--text-color-primary-dark);
+    }
+
 
     .team-container {
         margin-top: 80px;
@@ -1048,6 +1164,77 @@ img {
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
         margin-top: -30px;
+    }
+
+    .register-box {
+        width: 350px;
+        height: 300px;
+        background-color: #E2FEF6;
+        border-radius: 20px;
+        border-radius: 10px;
+        position: fixed;
+        top: 200px;
+        right: 430px;
+        z-index: 9;
+        background: url(../images/home/register-box.png) no-repeat;
+        background-size: contain;
+        background-color: #E2FEF6;
+        box-shadow: 0 0 10px 10px #888888;
+        display: none;
+    }
+
+    .register-box-anim {
+        animation-name: moveRegisterbox;
+        animation-duration: 1200ms;
+        animation-timing-function: ease-out;
+    }
+
+    @keyframes moveRegisterbox {
+        0% {
+            transform: translate(320px, -180px);
+        }
+
+        100% {
+            transform: translate(0px, 0px);
+        }
+    }
+
+
+
+    .register-div-form {
+        width: 500px;
+        max-height: auto;
+    }
+
+    .register-form-heading-1 {
+        font: normal normal bold 30px/33px var(--text-font-secondary);
+        letter-spacing: 0px;
+        color: var(--text-color-primary-dark);
+    }
+
+    .register-form-heading-2 {
+        font: normal normal bold 16px/33px var(--text-font-primary);
+        letter-spacing: 0px;
+        color: var(--text-color-primary-dark);
+        margin-top: -30px;
+    }
+
+    .register-succ-line-1 {
+        font: normal normal bold 32px var(--text-font-secondary);
+        letter-spacing: 0px;
+        color: var(--text-color-primary-dark);
+    }
+
+    .register-succ-line-2 {
+        font: normal normal bold 22px var(--text-font-primary);
+        letter-spacing: 0px;
+        color: #000000;
+    }
+
+    .register-succ-line-3 {
+        font: normal normal bold 12px var(--text-font-primary);
+        letter-spacing: 0px;
+        color: var(--text-color-primary-light);
     }
 
     .footer-div-img {

@@ -4,6 +4,185 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("entering in js file");
 
+
+    var firebaseConfig = {
+        apiKey: "AIzaSyA7lSzxaBmyf8a15RwiLbofWOjbsqEa1y4",
+        authDomain: "kalidro-services.firebaseapp.com",
+        databaseURL: "https://kalidro-services.firebaseio.com",
+        projectId: "kalidro-services",
+        storageBucket: "kalidro-services.appspot.com",
+        messagingSenderId: "1063548277544",
+        appId: "1:1063548277544:web:60221d68e445ad4506b61d",
+        measurementId: "G-77SF3JVYWF"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+
+    //function to send data in firebase
+    async function syncContactForm(name, email, message) {
+
+        if (navigator.onLine) {
+            try {
+
+                //connect firebase
+                let contactForm = await firebase.database().ref("contact-form").push();
+                //let newContactForm = await contactForm.push();
+
+                let syncRes = await contactForm.set({
+                    name: name,
+                    email: email,
+                    message: message
+                }, (err) => {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        document.getElementById("contactBtn").innerText = "Message delivered.";
+                        document.getElementById("name").innerText = "";
+                        document.getElementById("email").innerText = "";
+                        document.getElementById("contactFormMessage").innerText = "";
+                    }
+                });
+                console.log("syncRes");
+
+                console.log(syncRes);
+            } catch (err) {
+                console.log("in catch");
+                console.log(err);
+            }
+        } else {
+            console.log("you are offline")
+        }
+
+    }
+
+    document.getElementById("contactBtn").addEventListener("click", () => {
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let message = document.getElementById("contactFormMessage").value;
+
+        document.getElementById("contactBtn").innerText = "sending..";
+        document.getElementById("contactBtn").setAttribute("style", `
+        background-color: #124F3F;
+        color: white;
+        `)
+        if (name != "" && email != "" && message != "") {
+            syncContactForm(name, email, message);
+        } else {
+            document.getElementById("contactBtn").innerText = "Fileds can not be null!";
+        }
+
+
+    });
+
+
+
+    //add listner on register buttin
+
+    function moveRegisterBox() {
+        console.log("moving Btns");
+        let registerBox = document.getElementById("registerBox");
+        registerBox.style.display = "block";
+        registerBox.classList.add("register-box-anim");
+    }
+
+    let registerBtns = document.querySelectorAll(".register-button");
+    console.log(registerBtns);
+    registerBtns.forEach((el, index) => {
+
+        el.addEventListener("click", () => {
+            console.log("listened");
+            moveRegisterBox();
+        });
+    });
+
+    let regiterCloseBtn = document.getElementById("register-close");
+    regiterCloseBtn.addEventListener("click", () => {
+        document.getElementById("registerBox").style.display = "none";
+    });
+
+    // resistration
+
+    async function registerUser(name, email, role) {
+
+        if (navigator.onLine) {
+            try {
+                //connect firebase
+                let registerForm = await firebase.database().ref("register-form").push();
+                //let newContactForm = await contactForm.push();
+
+                let syncRes = await registerForm.set({
+                    name: name,
+                    email: email,
+                    role: role
+                }, (err) => {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        document.getElementById("registerBtn").innerText = "Registered Successfully!";
+                        document.getElementById("registerName").innerText = "";
+                        document.getElementById("registerEmail").innerText = "";
+                        document.getElementById("registerEmail").innerText = "";
+                        document.getElementById("registerName").innerText = "";
+                        document.getElementById("registerform").style.display = "none";
+                        document.getElementById("registerSucc").style.display = "block";
+
+                    }
+                });
+            } catch (err) {
+                console.log(err);
+            }
+        } else {
+            console.log("you are offline")
+        }
+
+    }
+
+
+
+    document.getElementById("registerBtn").addEventListener("click", () => {
+
+        let name = document.getElementById("registerName").value;
+        let email = document.getElementById("registerEmail").value;
+        let role = "";
+        if (document.getElementById("Student").checked) {
+            role = "Student";
+        } else if (document.getElementById("Educator").checked) {
+            role = "Educator";
+        } else if (document.getElementById("Institute").checked) {
+            role = "Institute";
+        } else {
+            role = "null"
+        }
+
+        document.getElementById("registerBtn").innerText = "processing..";
+        document.getElementById("registerBtn").setAttribute("style", `
+        background-color: #124F3F;
+        color: white;
+        `)
+        if (name != "" && email != "" && role != "") {
+            registerUser(name, email, role);
+        } else {
+            document.getElementById("registerBtn").innerText = "Fileds can not be null!";
+        }
+
+
+    });
+
+
+    // explore button listner
+
+    document.getElementById("exploreBtn").addEventListener("click", () => {
+        let registerBox = document.getElementById("registerBox");
+        registerBox.style.display = "none";
+        document.getElementById("registerform").style.display = "block";
+        document.getElementById("registerSucc").style.display = "none";
+
+    })
+
+
+
     //about 2 section interactions
     const SLIDETIME = 500;
     const dotBtns = document.querySelectorAll('.dotBtn');

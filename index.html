@@ -53,7 +53,7 @@
             </ul>
         </nav>
         <div class="header-div-btn">
-            <button class="header-btn btn" id="headerBtn">Register</button>
+            <button class="header-btn btn register-button" id="headerRegisterBtn">Register</button>
         </div>
     </header>
     <div class="chat-box-div">
@@ -64,7 +64,8 @@
                     <p class="chat-p">Chat Bot</p>
                 </div>
                 <div class="chat-header-btn-div">
-                    <button class="chat-header-btn" id="chat-popup-close"><img src="./images/home/close-window-32.png"></button>
+                    <button class="chat-header-btn" id="chat-popup-close"><img
+                            src="./images/home/close-window-32.png"></button>
                 </div>
             </div>
             <div class="chat-screen" id="chatScreen">
@@ -81,6 +82,48 @@
             </div>
         </div>
     </div>
+    <div class="register-box" id="registerBox">
+        <div class="register-form" id="registerform">
+            <button class="register-header-btn" id="register-close"><img
+                    src="./images/home/close-window-32.png"></button>
+            <div class="register-form-line-1">
+                <div class="register-form-div-name">
+                    <label class="register-form-label" for="name">Name</label>
+                    <br />
+                    <input id="registerName" name="name" type="text">
+                </div>
+                <div class="register-form-div-email">
+                    <label class="register-form-label" for="register-email">E-mail</label>
+                    <br />
+                    <input id="registerEmail" name="register-email" type="email">
+                </div>
+                <div class="register-form-div-role">
+                    <p class="register-form-div-role-p">You describe yourself as ?</p>
+                    <label for="Student" class="register-form-div-checkbox-label"><input type="radio" id="Student"
+                            name="role" value="Student">Student</label>
+                    <label for="Educator" class="register-form-div-checkbox-label"><input type="radio" id="Educator"
+                            name="role" value="Educator">Educator</label>
+                    <label for="Institute" class="register-form-div-checkbox-label"><input type="radio" id="Institute"
+                            name="role" value="Institute">Institute</label>
+                </div>
+            </div>
+            <div>
+                <button class="register-form-div-btn btn" id="registerBtn">Register</button>
+            </div>
+        </div>
+        <div class="register-succ" id="registerSucc">
+            <div class="register-succ-line-1">
+                <p>Congrats!</p>
+            </div>
+            <div class="register-succ-line-2">
+                <p>You have successfully registered for our beta program.</p>
+            </div>
+            <div>
+                <a href="#" ><button class="register-succ-btn btn" id="exploreBtn">Explore</button></a>
+                <p class="register-succ-line-3">To explore our website click here</p>
+            </div>
+        </div>
+    </div>
     <main class="main-container">
         <section class="home-container">
             <div class="home-container-div" id='homeContainer'>
@@ -89,7 +132,7 @@
                     <p class="home-div-text-2">Even Better!</p>
                 </div>
                 <div class="home-div-btn">
-                    <button class="home-btn btn" id="homeBtn">Register</button>
+                    <button class="home-btn btn register-button" id="homeregisterBtn">Register</button>
                 </div>
             </div>
         </section>
@@ -222,7 +265,7 @@
                         <p class="pricing-div-text-2">Till then hold with us and Register for the beta program.</p>
                     </div>
                     <div class="pricing-div-btn">
-                        <button class="pricing-btn btn" id="pricingBtn">Register</button>
+                        <button class="pricing-btn btn register-button" id="pricingRegisterBtn">Register</button>
                     </div>
                 </div>
                 <div class="pricing-div-2">
@@ -304,7 +347,7 @@
                     <p class="contact-form-heading-1">Connect With Us</p>
                     <p class="contact-form-heading-2">Fill out this form to send an e-mail to us.</p>
                 </div>
-                <form class="contact-form">
+                <div class="contact-form">
                     <div class="contact-form-line-1">
                         <div class="contact-form-div-name">
                             <label class="form-label" for="name">Name</label>
@@ -324,7 +367,7 @@
                     <div>
                         <button class="contact-form-div-btn btn" id="contactBtn">Send</button>
                     </div>
-                </form>
+                </div>
             </div>
             <div>
                 <img class="footer-div-img" src="./images/connect/connect-img.png" />
@@ -392,7 +435,8 @@
     </footer>
 </body>
 
-
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
 <script type="text/javascript" defer src="./js/main.js"></script>
 
 </html>
