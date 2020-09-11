@@ -103,8 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
             el.classList.add("feature-slide-btn-active");
             if (el.id == 'feature-slideBtn-1') {
                 myFeatureList1Move();
-            }
-            else if (el.id == 'feature-slideBtn-2') {
+            } else if (el.id == 'feature-slideBtn-2') {
                 myFeatureList2Move();
             }
             if (index !== 0 && newActiveFeatureSlideIndex === null) {
@@ -398,9 +397,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let teamBtn = document.querySelector(".team-button-div");
 
-    teamBtn.addEventListener("click", () => {
+
+
+    // chat box
+
+    let chatSendBtn = document.getElementById("chatSendBtn")
+    chatSendBtn.addEventListener("click", () => {
         console.log("hi");
+        let inputFromTextBox = document.getElementById("chatBoxText").value;
+        let chatScreen = document.getElementById("chatScreen");
+        let output = document.createElement("textarea")
+        switch (inputFromTextBox) {
+            case "1":
+                output.value = "anwer1";
+                chatScreen.appendChild(output);
+                output.classList.add("chat-screen-text-output");
+                output.focus();
+                output.disabled = true;
+                break;
+            case "2":
+                output.value = "anwer2";
+                chatScreen.appendChild(output);
+                output.classList.add("chat-screen-text-output");
+                output.focus();
+                output.disabled = true;
+                break;
+            case "3":
+                output.value = "anwer3";
+                chatScreen.appendChild(output);
+                output.classList.add("chat-screen-text-output");
+                output.focus();
+                output.disabled = true;
+                break;
+            default:
+                output.value = "Wrong Input provided";
+                chatScreen.appendChild(output);
+                output.classList.add("chat-screen-text-output");
+                output.focus();
+                output.disabled = true;
+                break;
+
+        }
     });
+
+    let chatCloseBtn = document.getElementById("chat-popup-close");
+    chatCloseBtn.addEventListener("click", () => {
+        document.getElementById("myForm").style.display = "none";
+    });
+
+    let chatBtn = document.getElementById("chat-btn");
+    chatBtn.addEventListener("click", () => {
+        document.getElementById("myForm").style.display = "block";
+    });
+
 
 
 

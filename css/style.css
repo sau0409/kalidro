@@ -81,6 +81,115 @@ nav ul li {
     padding: 0px
 }
 
+.chat-popup {
+    width: 250px;
+    height: 365px;
+    background-color: #99ffcc;
+    border: none;
+    border-radius: 10px;
+    position: fixed;
+    top: 168px;
+    right: 20px;
+    z-index: 9;
+    display: none;
+  }
+  
+  .chat-header {
+    background-color: #b3abff;
+    border-radius: 10px;
+    font: normal normal 600 18px var(--text-font-primary);
+    letter-spacing: 0px;
+    color: #000000;
+    margin-top: -18px;
+    display: grid;
+    grid-template-columns: .7fr .3fr;
+    align-items: center;
+
+  }
+
+  .chat-header-p-div,
+  .chat-header-btn-div {
+      margin: 0px;
+      padding: 0px;
+      justify-self: center;
+  }
+  
+  .chat-header-btn {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      width: 30px;
+      height: 30px;
+  }
+
+  
+  .chat-screen {
+    width: 230px;
+    height: 250px;
+    background-color: white;
+    margin-left: 10px;
+    overflow: scroll;
+    border-radius: 10px;
+  }
+  
+  .chat-box {
+    width: 230px;
+    height: 40px;
+    background-color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: .8fr .2fr;
+    border-radius: 10px;
+  }
+  
+  .chat-box-text {
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    resize: none;
+    outline: none;
+    padding:  5px;
+    font-size: 10px;
+  }
+  
+  .chat-box-button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: #124F3F;
+    color: white;
+  }
+  
+  .chat-screen-text-input{
+    box-sizing: border-box;
+    width: 190px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    resize: none;
+    outline: none;
+    padding: 5px;
+    margin: 5px;
+    padding-right: 5px;
+    background-color: #FFF7AB;
+  }
+  
+  .chat-screen-text-output{
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    border: none;
+    resize: none;
+    outline: none;
+    padding: 5px;
+    margin: 5px;
+    margin-left: 10px;
+    background-color: #00000033;
+  }
+
 .btn::before {
     content: '';
     position: absolute;
@@ -123,6 +232,22 @@ img {
     color: #000000;
     background-color: var(--text-color-primary-light);
     opacity: 0.9;
+}
+
+.chat-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: fixed;
+    top: 500px;
+    left: 1100px;
+    z-index: 2;
+}
+
+
+.chat-img {
+    max-width: 140px;
+    max-height: 30px;
 }
 
 .home-btn {
@@ -588,8 +713,8 @@ img {
 
 .team-div-img {
 
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: none;
     box-shadow: 0 0 10px 5px #888888;
@@ -821,6 +946,7 @@ img {
 
     .team-container {
         margin-top: 80px;
+        background: url(../images/team/team-bcg.png) no-repeat center;
     }
 
     .team-container-div {
@@ -835,16 +961,20 @@ img {
 
     .team-main {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         max-width: auto;
         height: auto;
         justify-items: center;
         align-items: center;
     }
 
+    .team-img {
+        padding-top: 70px
+    }
+
     .team-secondary {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         max-width: auto;
         height: auto;
         justify-items: center;
@@ -854,9 +984,11 @@ img {
     .team-main-1-text-1,
     .team-main-2-text-1,
     .team-main-3-text-1,
+    .team-main-4-text-1,
     .team-sec-1-text-1,
     .team-sec-2-text-1,
-    .team-sec-3-text-1 {
+    .team-sec-3-text-1,
+    .team-sec-4-text-1 {
 
         font: normal normal 600 18px var(--text-font-primary);
         letter-spacing: 0px;
@@ -864,9 +996,12 @@ img {
 
     }
 
+
+
     .team-main-1-text-2,
     .team-main-2-text-2,
     .team-main-3-text-2,
+    .team-main-4-text-2,
     .team-sec-1-text-2,
     .team-sec-2-text-2,
     .team-sec-3-text-2 {
