@@ -579,7 +579,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // chat box
-
+/*
     let chatSendBtn = document.getElementById("chatSendBtn")
     chatSendBtn.addEventListener("click", () => {
         console.log("hi");
@@ -618,6 +618,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
     });
+    */
 
     let chatCloseBtn = document.getElementById("chat-popup-close");
     chatCloseBtn.addEventListener("click", () => {
@@ -626,6 +627,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let chatBtn = document.getElementById("chat-btn");
     chatBtn.addEventListener("click", () => {
+        console.log("lis");
         document.getElementById("myForm").style.display = "block";
     });
 
