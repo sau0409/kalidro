@@ -867,7 +867,6 @@ li a {
         background: url(../images/pricing/pricing-bcg.png) no-repeat;
         background-size: cover;
         background-position: bottom;
-        width: 100vw;
     }
 
     .pricing-div-1 {
@@ -1410,12 +1409,14 @@ li a {
 
     .about-div-1 {
         padding-top: 10vh;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
     }
 
 
     .about-div-1-main-text,
     .about-div-2-main-text {
-        font: normal normal bold 2.8rem var(--text-font-secondary);
+        font: normal normal bold 2rem var(--text-font-secondary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
@@ -1442,11 +1443,11 @@ li a {
     }
 
     .about-div-1-mid-text {
-        font: normal normal bold 1rem var(--text-font-primary);
+        font: normal normal bold 0.8rem var(--text-font-primary);
     }
 
     .about-div-1-last-text {
-        font: normal normal 600 1.8rem var(--text-font-primary);
+        font: normal normal 600 1.5rem var(--text-font-primary);
         color: #000000;
     }
 
@@ -1464,7 +1465,7 @@ li a {
     .about-div-2-1-mid-text-1,
     .about-div-2-2-mid-text-1,
     .about-div-2-3-mid-text-1 {
-        font: normal normal bold 2rem var(--text-font-primary);
+        font: normal normal bold 1.4rem var(--text-font-primary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
@@ -1472,7 +1473,7 @@ li a {
     .about-div-2-1-mid-text-2,
     .about-div-2-2-mid-text-2,
     .about-div-2-3-mid-text-2 {
-        font: normal normal bold 1rem var(--text-font-primary);
+        font: normal normal bold 0.7rem var(--text-font-primary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
@@ -1492,10 +1493,10 @@ li a {
 
     .feature-slide-btn {
         letter-spacing: 0px;
-        font: normal normal bold 1.5rem var(--text-font-primary);
+        font: normal normal bold 1rem var(--text-font-primary);
         color: var(--text-color-primary-dark);
-        margin: 0rem 2rem 0rem 2rem;
-        padding: 0.3rem 1.5rem 0.3rem 1.5rem;
+        margin: 0rem .5rem 0rem .5rem;
+        padding: 0.3rem .5rem 0.3rem .5rem;
         background: transparent;
         border-radius: 3rem;
     }
@@ -1504,7 +1505,7 @@ li a {
     .feature-slide-btn:hover {
         opacity: 1;
         text-align: center;
-        font: normal normal bold 1.5rem Poppins;
+        font: normal normal bold 1rem Poppins;
         letter-spacing: 0px;
         color: #124F3F;
         outline: none;
@@ -1555,7 +1556,7 @@ li a {
         width: 90vw;
         height: 40vh;
         text-align: center;
-        font: normal normal bold 1.3rem var(--text-font-primary);
+        font: normal normal bold 1rem var(--text-font-primary);
         letter-spacing: 0px;
         opacity: 1;
 
@@ -1565,7 +1566,7 @@ li a {
     .feature-div-2-list,
     .feature-div-3-list {
         text-align: center;
-        font: normal normal 600 1.3rem var(--text-font-primary);
+        font: normal normal 600 .8rem var(--text-font-primary);
         letter-spacing: 0px;
         padding: .5rem;
         margin: .5rem;
@@ -1586,7 +1587,6 @@ li a {
         background: url(../images/pricing/pricing-bcg.png) no-repeat;
         background-size: cover;
         background-position: bottom;
-        width: 100vw;
     }
 
     .pricing-div-1 {
@@ -1599,20 +1599,20 @@ li a {
     }
 
     .pricing-div-text-1 {
-        font: normal normal bold 3rem var(--text-font-secondary);
+        font: normal normal bold 1.5rem var(--text-font-secondary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
 
     .pricing-div-text-2 {
-        font: normal normal bold 1rem var(--text-font-primary);
+        font: normal normal bold .6rem var(--text-font-primary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
         padding: 0rem 3rem 0rem 3rem;
     }
 
     .pricing-btn {
-        font: normal normal 600 1.5rem var(--text-font-primary);
+        font: normal normal 600 1rem var(--text-font-primary);
         background-color: var(--text-color-primary-dark);
         color: #ffffff;
         border-radius: 3rem;
@@ -1625,7 +1625,7 @@ li a {
     }
 
     .team-div-text-1 {
-        font: normal normal bold 3rem var(--text-font-secondary);
+        font: normal normal bold 1.5rem var(--text-font-secondary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
@@ -1637,8 +1637,8 @@ li a {
         height: auto;
         justify-items: center;
         align-items: center;
-        row-gap: 2vh;
-        margin-top: 5vh;
+        row-gap: 1.5vh;
+        margin-top: 3vh;
     }
 
     .team-main-1-text-1,
@@ -1650,7 +1650,7 @@ li a {
     .team-sec-3-text-1,
     .team-sec-4-text-1 {
 
-        font: normal normal 600 1rem var(--text-font-primary);
+        font: normal normal 600 .7rem var(--text-font-primary);
         letter-spacing: 0px;
         color: #000000;
 
@@ -1666,77 +1666,72 @@ li a {
     .team-sec-2-text-2,
     .team-sec-3-text-2 {
 
-        font: normal normal 600 1rem var(--text-font-primary);
+        font: normal normal 600 .6rem var(--text-font-primary);
         letter-spacing: 0px;
         color: #000000;
+        margin-top: -1vh;
 
     }
 
     .team-div-img {
-        width: 10rem;
-        height: 10rem;
+        width: 7rem;
+        height: 7rem;
         border-radius: 50%;
         border: none;
         box-shadow: 0 0 .7rem .4rem #888888;
     }
 
-    .footer {
-        display: grid;
-        grid-template-rows: 2fr .1fr;
-        justify-items: center;
-    }
 
 
     .footer-div-img {
-        max-width: 40vw;
-        max-height: 40vh;
+        max-width: 50vw;
+        max-height: 30vh;
     }
 
     .footer-mid {
         display: grid;
-        grid-template-columns: .6fr .4fr;
-        max-width: auto;
-        height: auto;
+        grid-template-rows: 1fr 1fr;
         align-self: center;
         justify-items: center;
         align-items: center;
 
     }
 
-    .footer-items-div {
-        width: 100vw;
-    }
-
     .footer-item-4-social {
         background-color: transparent;
         border: none;
-        max-width: 3vw;
-        max-height: 3vh;
-        padding-right: 1vw;
+        max-width: 2vw;
+        max-height: 2vh;
+        padding: 0rem 0.5rem 0rem 0.5rem;
     }
 
     .copyright {
-        font: normal normal bold 0.6rem var(--text-font-primary);
+        font: normal normal bold 0.5rem var(--text-font-primary);
         letter-spacing: 0px;
         color: white;
-        margin-top: auto;
+        background-color: var(--text-color-primary-dark);
     }
 
     .footer-item-2-text-1 {
-        font: normal normal bold 0.8rem var(--text-font-primary);
+        font: normal normal bold 0.6rem var(--text-font-primary);
     }
 
     .footer-item-2-text-2 {
-        font: normal normal bold 0.7rem var(--text-font-primary);
+        font: normal normal bold 0.5rem var(--text-font-primary);
     }
 
     .footer-items {
         letter-spacing: 0px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        justify-items: start;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        justify-items: center;
         color: white;
-        text-align: start;
-        align-items: flex-end;
+        text-align: center;
+        align-items: center;
+        background-color: var(--text-color-primary-dark);
+    }
+
+    .footer-items-div {
+        width: 100vw;
     }
 }
