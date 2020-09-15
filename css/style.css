@@ -1578,7 +1578,7 @@ li a {
     .pricing-container-div {
         display: grid;
         grid-template-rows: 1fr 1fr;
-        width: 90vw;
+        width: 100vw;
         justify-items: center;
         align-items: center;
         margin-top: 20vh;
@@ -1622,6 +1622,7 @@ li a {
         color: var(--text-color-primary-dark);
     }
 
+
     .team-div-text-1 {
         font: normal normal bold 2rem var(--text-font-secondary);
         letter-spacing: 0px;
@@ -1630,12 +1631,11 @@ li a {
 
     .team-main {
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        width: auto;
-        height: auto;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         justify-items: center;
         align-items: center;
-        row-gap: 1.5vh;
+        row-gap: 10vh;
         margin-top: 3vh;
     }
 
