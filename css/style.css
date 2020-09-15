@@ -26,6 +26,9 @@ body {
 .footer {
     height: 100vh;
     width: 100vw;
+    border: solid;
+    border-width: 0.1px;
+    border-color: #FFFFFF;
 }
 
 .header {
@@ -301,7 +304,7 @@ nav ul li {
 @media (min-width: 750px) {
 
     html {
-        font-size: medium;
+        font-size: 1rem;
     }
 
     .header {
@@ -683,13 +686,13 @@ nav ul li {
 
 
     .about-div-1 {
-        margin-top: 20vh;
+        padding-top: 15vh;
     }
 
 
     .about-div-1-main-text,
     .about-div-2-main-text {
-        font: normal normal bold 3rem var(--text-font-secondary);
+        font: normal normal bold 2.5rem var(--text-font-secondary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
@@ -716,7 +719,7 @@ nav ul li {
     }
 
     .about-div-1-mid-text {
-        font: normal normal bold 1rem var(--text-font-primary);
+        font: normal normal bold .9rem var(--text-font-primary);
     }
 
     .about-div-1-last-text {
@@ -734,7 +737,7 @@ nav ul li {
     .about-div-2-1-mid-text-1,
     .about-div-2-2-mid-text-1,
     .about-div-2-3-mid-text-1 {
-        font: normal normal bold 2rem var(--text-font-primary);
+        font: normal normal bold 2.1rem var(--text-font-primary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
@@ -742,7 +745,7 @@ nav ul li {
     .about-div-2-1-mid-text-2,
     .about-div-2-2-mid-text-2,
     .about-div-2-3-mid-text-2 {
-        font: normal normal bold 1rem var(--text-font-primary);
+        font: normal normal bold 0.9rem var(--text-font-primary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
@@ -761,12 +764,12 @@ nav ul li {
 
 
     .feature-div-btn {
-        padding-top: 10vh;
+        padding-top: 18vh;
     }
 
     .feature-slide-btn {
         letter-spacing: 0px;
-        font: normal normal bold 1.3rem var(--text-font-primary);
+        font: normal normal bold 1.2rem var(--text-font-primary);
         color: var(--text-color-primary-dark);
         margin: 0rem 2rem 0rem 2rem;
         padding: 0.3rem 1.5rem 0.3rem 1.5rem;
@@ -778,7 +781,7 @@ nav ul li {
     .feature-slide-btn:hover {
         opacity: 1;
         text-align: center;
-        font: normal normal bold 1.3rem var(--text-font-primary);
+        font: normal normal bold 1.2rem var(--text-font-primary);
         letter-spacing: 0px;
         color: #124F3F;
         outline: none;
@@ -828,10 +831,10 @@ nav ul li {
     .feature-div-2-list-container,
     .feature-div-3-list-container {
         justify-self: center;
-        width: 40vw;
+        width: 50vw;
         height: 30vh;
         text-align: center;
-        font: normal normal bold 1.3rem var(--text-font-primary);
+        font: normal normal bold 2rem var(--text-font-primary);
         letter-spacing: 0px;
         opacity: 1;
 
@@ -841,11 +844,11 @@ nav ul li {
     .feature-div-2-list,
     .feature-div-3-list {
         text-align: center;
-        font: normal normal 600 1.3rem var(--text-font-primary);
+        font: normal normal 600 1.5rem var(--text-font-primary);
         letter-spacing: 0px;
         padding: .5rem;
         margin: .5rem;
-        height: 5vh;
+        height: 6vh;
     }
 
     .pricing-container-div {
@@ -866,7 +869,7 @@ nav ul li {
     }
 
     .pricing-div-1 {
-        width: 50vw;
+        width: 40vw;
     }
 
     .pricing-div-img {
@@ -941,6 +944,9 @@ nav ul li {
         background-position: center;
         background-size: 110% 110%;
     }
+    .team-container-div {
+        padding-top: 10vh;
+    }
 
     .team-div-text-1 {
         font: normal normal bold 3rem var(--text-font-secondary);
@@ -955,7 +961,7 @@ nav ul li {
         height: auto;
         justify-items: center;
         align-items: center;
-        margin-top: 25vh;
+        margin-top: 15vh;
     }
 
     .team-main-1-text-1,
@@ -967,7 +973,7 @@ nav ul li {
     .team-sec-3-text-1,
     .team-sec-4-text-1 {
 
-        font: normal normal 600 18px var(--text-font-primary);
+        font: normal normal 600 1rem var(--text-font-primary);
         letter-spacing: 0px;
         color: #000000;
 
@@ -983,16 +989,16 @@ nav ul li {
     .team-sec-2-text-2,
     .team-sec-3-text-2 {
 
-        font: normal normal 600 12px var(--text-font-primary);
+        font: normal normal 600 0.7rem var(--text-font-primary);
         letter-spacing: 0px;
         color: #000000;
-        margin-top: -18px;
+        margin-top: -1rem;
 
     }
 
     .team-div-img {
-        width: 12rem;
-        height: 12rem;
+        width: 11rem;
+        height: 11rem;
         border-radius: 50%;
         border: none;
         box-shadow: 0 0 .7rem .4rem #888888;
@@ -1000,17 +1006,16 @@ nav ul li {
 
     .footer {
         background: url(../images/connect/items-bcg.png) no-repeat bottom, url(../images/connect/connect-bcg.png) no-repeat center;
-        background-size: contain, 110% 110%;
+        background-size: 110% 30%, 110% 110%;
         display: grid;
-        grid-template-rows: 1fr .1fr;
+        grid-template-rows: 2fr .1fr;
         justify-items: center;
-        row-gap: 20vh;
     }
 
 
     .footer-div-img {
         max-width: 40vw;
-        max-height: 50vh;
+        max-height: 40vh;
     }
 
     .footer-mid {
@@ -1031,26 +1036,34 @@ nav ul li {
     .footer-item-4-social {
         background-color: transparent;
         border: none;
-        max-width: 5vw;
-        max-height: 5vh;
+        max-width: 3vw;
+        max-height: 3vh;
         padding-right: 1vw;
     }
 
     .copyright {
-        font: normal normal bold 10px var(--text-font-primary);
+        font: normal normal bold 0.6rem var(--text-font-primary);
         letter-spacing: 0px;
         color: white;
         margin-top: auto;
     }
 
+    .footer-item-2-text-1 {
+        font: normal normal bold 0.8rem var(--text-font-primary);
+    }
+
+    .footer-item-2-text-2 {
+        font: normal normal bold 0.7rem var(--text-font-primary);
+    }
+
     .footer-items {
-        font: normal normal bold 1rem var(--text-font-primary);
         letter-spacing: 0px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         justify-items: start;
         color: white;
         text-align: start;
+        align-items: flex-end;
     }
 
 }
@@ -1058,7 +1071,7 @@ nav ul li {
 @media (max-width: 750px) {
 
     html {
-        font-size: small;
+        font-size: 0.7;
     }
 
     .header {
@@ -1388,13 +1401,13 @@ nav ul li {
 
 
     .about-div-1 {
-        margin-top: 40vh;
+        padding-top: 40vh;
     }
 
 
     .about-div-1-main-text,
     .about-div-2-main-text {
-        font: normal normal bold 3rem var(--text-font-secondary);
+        font: normal normal bold 2.8rem var(--text-font-secondary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
