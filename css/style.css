@@ -38,7 +38,7 @@ body {
     opacity: 0.8;
     top: 0px;
     left: 0px;
-    width: 100%;
+    width: 100vw;
     display: grid;
     color: white;
     z-index: 5;
@@ -1083,7 +1083,7 @@ li a {
         justify-items: center;
         align-items: center;
         height: 15vh;
-        position: fixed;
+        position: static;
     }
 
     .header-div-btn {
@@ -1388,7 +1388,7 @@ li a {
     }
 
     .home-container-div {
-        margin-top: 45vh;
+        margin-top: 25vh;
     }
 
     .home-div-text-1 {
