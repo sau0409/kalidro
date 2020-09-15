@@ -27,8 +27,8 @@ body {
     height: 100vh;
     width: 100vw;
     border: solid;
-    border-width: 0.2px;
-    border-color: #000000;
+    border-color: #FFFFFF;
+    border-width: 0.01px;
 }
 
 .header {
@@ -93,6 +93,7 @@ li a {
     max-height: auto;
     justify-items: center;
     align-items: center;
+    margin-top: 10vh;
 }
 
 .dotBtn {
@@ -706,8 +707,11 @@ li a {
     .about-div-1-mid-text1,
     .about-div-1-mid-text2,
     .about-div-2-1-mid-text,
+    .about-div-2-1-mid-img,
     .about-div-2-2-mid-text,
-    .about-div-2-3-mid-text {
+    .about-div-2-2-mid-img,
+    .about-div-2-3-mid-text,
+    .about-div-2-3-mid-img {
         max-width: 35vw;
         max-height: auto;
     }
@@ -1078,7 +1082,7 @@ li a {
         grid-template-rows: 1fr 1fr 1fr;
         justify-items: center;
         align-items: center;
-        height: 10vh;
+        height: 15vh;
         position: fixed;
     }
 
@@ -1166,7 +1170,7 @@ li a {
 
 
     .chat-img {
-        max-width: 25vw;
+        max-width: 20vw;
         max-height: 20vh;
         border-radius: 3rem;
     }
@@ -1239,7 +1243,7 @@ li a {
     }
 
     .register-box {
-        width: 85vw;
+        width: 60vw;
         height: auto;
         background-color: #E2FEF6;
         position: fixed;
@@ -1406,14 +1410,12 @@ li a {
 
     .about-div-1 {
         padding-top: 10vh;
-        padding-left: 0.3rem;
-        padding-right: 0.3rem;
     }
 
 
     .about-div-1-main-text,
     .about-div-2-main-text {
-        font: normal normal bold 2rem var(--text-font-secondary);
+        font: normal normal bold 1.5rem var(--text-font-secondary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
@@ -1430,13 +1432,15 @@ li a {
     .about-div-2-2-mid-img,
     .about-div-2-3-mid-text,
     .about-div-2-3-mid-img {
-        max-width: 75vw;
+        max-width: 35vw;
         max-height: auto;
     }
 
     .about-div-1-mid-img {
         max-width: 20vw;
         max-height: 20vh;
+        border-color: red;
+
     }
 
     .about-div-1-mid-text {
@@ -1444,25 +1448,25 @@ li a {
     }
 
     .about-div-1-last-text {
-        font: normal normal 600 1.5rem var(--text-font-primary);
+        font: normal normal 600 1.3rem var(--text-font-primary);
         color: #000000;
     }
 
     .about-div-2 {
-        margin-top: 5vh;
+        padding-top: 15vh;
     }
 
     .about-div-2-1-mid-img,
     .about-div-2-2-mid-img,
     .about-div-2-3-mid-img {
         max-width: 20vw;
-        max-height: 20vh;
+        max-height: auto;
     }
 
     .about-div-2-1-mid-text-1,
     .about-div-2-2-mid-text-1,
     .about-div-2-3-mid-text-1 {
-        font: normal normal bold 1.4rem var(--text-font-primary);
+        font: normal normal bold 1.7rem var(--text-font-primary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
@@ -1484,13 +1488,10 @@ li a {
         margin: 2vw 5vw 0px 5vw;
     }
 
-    .feature-div-btn {
-        padding-top: 10vh;
-    }
 
     .feature-slide-btn {
         letter-spacing: 0px;
-        font: normal normal bold 1rem var(--text-font-primary);
+        font: normal normal bold .8rem var(--text-font-primary);
         color: var(--text-color-primary-dark);
         margin: 0rem .5rem 0rem .5rem;
         padding: 0.3rem .5rem 0.3rem .5rem;
@@ -1502,7 +1503,7 @@ li a {
     .feature-slide-btn:hover {
         opacity: 1;
         text-align: center;
-        font: normal normal bold 1rem Poppins;
+        font: normal normal bold .8rem var(--text-font-primary);
         letter-spacing: 0px;
         color: #124F3F;
         outline: none;
@@ -1511,17 +1512,17 @@ li a {
 
     #feature-slider-div {
         position: relative;
-        height: 100vh;
+        height: 80vh;
         overflow: hidden;
     }
 
     .feature-slide-div {
         position: absolute;
         width: 100vw;
-        height: 90vh;
+        height: 70vh;
         background-color: #FFFFFF;
         opacity: 1;
-        transition: transform 500ms ease;
+        transition: transform 500ms ease-in;
         animation-duration: 500ms;
     }
 
@@ -1530,8 +1531,10 @@ li a {
     .feature-div-3-container {
         display: grid;
         grid-template-rows: 1fr 1fr;
+        justify-self: center;
+        align-self: center;
         width: 100vw;
-        height: 90vh;
+        height: 50vh;
         row-gap: 25vh;
     }
 
@@ -1539,21 +1542,21 @@ li a {
     .feature-div-1-img-container,
     .feature-div-2-img-container,
     .feature-div-3-img-container {
+        width: 30vw;
+        height: 20vh;
+        opacity: 1;
         justify-self: center;
         align-self: center;
-        width: 40vw;
-        height: 30vh;
-        opacity: 1;
     }
 
     .feature-div-1-list-container,
     .feature-div-2-list-container,
     .feature-div-3-list-container {
         justify-self: center;
-        width: 90vw;
+        width: 100vw;
         height: 40vh;
         text-align: center;
-        font: normal normal bold 1rem var(--text-font-primary);
+        font: normal normal bold .7rem var(--text-font-primary);
         letter-spacing: 0px;
         opacity: 1;
 
@@ -1563,9 +1566,9 @@ li a {
     .feature-div-2-list,
     .feature-div-3-list {
         text-align: center;
-        font: normal normal 600 .8rem var(--text-font-primary);
+        font: normal normal 600 1rem var(--text-font-primary);
         letter-spacing: 0px;
-        padding: .5rem;
+        padding: .6rem;
         margin: .5rem;
         height: 2vh;
     }
@@ -1573,8 +1576,7 @@ li a {
     .pricing-container-div {
         display: grid;
         grid-template-rows: 1fr 1fr;
-        max-width: auto;
-        height: auto;
+        width: 90vw;
         justify-items: center;
         align-items: center;
         margin-top: 20vh;
@@ -1586,9 +1588,6 @@ li a {
         background-position: bottom;
     }
 
-    .pricing-div-1 {
-        width: 100vw;
-    }
 
     .pricing-div-img {
         max-width: 70vw;
@@ -1596,20 +1595,20 @@ li a {
     }
 
     .pricing-div-text-1 {
-        font: normal normal bold 1.5rem var(--text-font-secondary);
+        font: normal normal bold 2rem var(--text-font-secondary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
 
     .pricing-div-text-2 {
-        font: normal normal bold .6rem var(--text-font-primary);
+        font: normal normal bold .8rem var(--text-font-primary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
         padding: 0rem 3rem 0rem 3rem;
     }
 
     .pricing-btn {
-        font: normal normal 600 1rem var(--text-font-primary);
+        font: normal normal 600 1.2rem var(--text-font-primary);
         background-color: var(--text-color-primary-dark);
         color: #ffffff;
         border-radius: 3rem;
@@ -1622,7 +1621,7 @@ li a {
     }
 
     .team-div-text-1 {
-        font: normal normal bold 1.5rem var(--text-font-secondary);
+        font: normal normal bold 2rem var(--text-font-secondary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
@@ -1630,7 +1629,7 @@ li a {
     .team-main {
         display: grid;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        max-width: auto;
+        width: auto;
         height: auto;
         justify-items: center;
         align-items: center;
@@ -1641,11 +1640,7 @@ li a {
     .team-main-1-text-1,
     .team-main-2-text-1,
     .team-main-3-text-1,
-    .team-main-4-text-1,
-    .team-sec-1-text-1,
-    .team-sec-2-text-1,
-    .team-sec-3-text-1,
-    .team-sec-4-text-1 {
+    .team-main-4-text-1{
 
         font: normal normal 600 .7rem var(--text-font-primary);
         letter-spacing: 0px;
@@ -1658,10 +1653,7 @@ li a {
     .team-main-1-text-2,
     .team-main-2-text-2,
     .team-main-3-text-2,
-    .team-main-4-text-2,
-    .team-sec-1-text-2,
-    .team-sec-2-text-2,
-    .team-sec-3-text-2 {
+    .team-main-4-text-2 {
 
         font: normal normal 600 .6rem var(--text-font-primary);
         letter-spacing: 0px;
@@ -1681,10 +1673,11 @@ li a {
 
     .footer {
         display: grid;
-        grid-template-rows: 1fr 1fr;
-        justify-items: center;
+        grid-template-rows: 1fr .1fr;
         align-items: flex-end;
+        
     }
+
 
     .footer-div-img {
         display: none;
@@ -1692,7 +1685,7 @@ li a {
 
     .footer-mid {
         display: grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr .1fr;
         align-self: center;
         justify-items: center;
         align-items: center;
@@ -1702,24 +1695,25 @@ li a {
     .footer-item-4-social {
         background-color: transparent;
         border: none;
-        max-width: 3vw;
-        max-height: 3vh;
+        max-width: 4vw;
+        max-height: 4vh;
         padding: 0rem 0.5rem 0rem 0.5rem;
     }
 
     .copyright {
-        font: normal normal bold 0.8rem var(--text-font-primary);
+        font: normal normal bold 0.6rem var(--text-font-primary);
         letter-spacing: 0px;
         color: white;
         background-color: var(--text-color-primary-dark);
+        padding: 0.5rem 0rem 0.5rem 0rem;
     }
 
     .footer-item-2-text-1 {
-        font: normal normal bold 1.1rem var(--text-font-primary);
+        font: normal normal bold 0.8rem var(--text-font-primary);
     }
 
     .footer-item-2-text-2 {
-        font: normal normal bold 1rem var(--text-font-primary);
+        font: normal normal bold 0.7rem var(--text-font-primary);
     }
 
     .footer-items {
