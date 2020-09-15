@@ -1682,10 +1682,15 @@ li a {
     }
 
 
+    .footer {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        align-items: flex-end;
+    }
 
     .footer-div-img {
-        max-width: 50vw;
-        max-height: 30vh;
+        display: none;
     }
 
     .footer-mid {
@@ -1700,24 +1705,25 @@ li a {
     .footer-item-4-social {
         background-color: transparent;
         border: none;
-        max-width: 2vw;
-        max-height: 2vh;
+        max-width: 5vw;
+        max-height: 5vh;
         padding: 0rem 0.5rem 0rem 0.5rem;
     }
 
     .copyright {
-        font: normal normal bold 0.5rem var(--text-font-primary);
+        font: normal normal bold 0.8rem var(--text-font-primary);
         letter-spacing: 0px;
         color: white;
         background-color: var(--text-color-primary-dark);
+        padding: 0rem 0.7rem 0rem 0.7rem;
     }
 
     .footer-item-2-text-1 {
-        font: normal normal bold 0.6rem var(--text-font-primary);
+        font: normal normal bold 1.1rem var(--text-font-primary);
     }
 
     .footer-item-2-text-2 {
-        font: normal normal bold 0.5rem var(--text-font-primary);
+        font: normal normal bold 1rem var(--text-font-primary);
     }
 
     .footer-items {
