@@ -32,7 +32,7 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: #124F3F;
-    opacity: 0.7;
+    opacity: 0.8;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -73,24 +73,7 @@ nav ul li {
     fill: #ffffff;
 }
 
-.header-btn {
-    letter-spacing: 0px;
-    color: #000000;
-    background-color: var(--text-color-primary-light);
-    opacity: 0.9;
-}
 
-
-.home-btn {
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 0.5;
-}
-
-.header-btn::before,
-.home-btn::before {
-    background-color: #FFF7AB;
-}
 
 
 .about-div-1-mid-text-container {
@@ -347,10 +330,41 @@ nav ul li {
         letter-spacing: 0.15em;
     }
 
+
+
+
     .header-btn {
+        letter-spacing: 0px;
+        color: #000000;
+        background-color: #FFF7AB;
+        opacity: 1;
         font: normal normal 600 1rem var(--text-font-primary);
         border-radius: 3rem;
         padding: .2rem .7rem .2rem 1rem;
+        position: relative;
+        border: none;
+        outline: none;
+        border-radius: 3rem;
+        z-index: 1;
+    }
+
+    .header-btn::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--text-color-primary-light);
+        z-index: -1;
+        border-top: 20px;
+        transition: transform 200ms;
+        transform: scaleX(1) skew(0deg);
+        border-radius: 3rem;
+    }
+
+    .header-btn:hover::before {
+        transform: scaleX(0) skew(90deg);
     }
 
     .chat-btn {
@@ -625,10 +639,42 @@ nav ul li {
         margin-top: -5vh;
     }
 
+
+
     .home-btn {
+        letter-spacing: 0px;
+        color: #000000;
+        background-color: #FFF7AB;
+        opacity: 1;
         font: normal normal bold 1.2rem var(--text-font-primary);
         border-radius: 3rem;
         padding: .4rem 1.3rem .4rem 1.3rem;
+        position: relative;
+        border: none;
+        outline: none;
+        border-radius: 3rem;
+        z-index: 1;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 0.9;
+    }
+
+    .home-btn::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--text-color-primary-light);
+        z-index: -1;
+        transition: transform 300ms;
+        transform: scaleX(1) skew(0deg);
+        border-radius: 3rem;
+    }
+
+    .home-btn:hover::before {
+        transform: scaleX(0) skew(90deg);
     }
 
     .home-div-btn {
@@ -841,19 +887,53 @@ nav ul li {
         padding: 0rem 3rem 0rem 3rem;
     }
 
+
+
     .pricing-btn {
+        letter-spacing: 0px;
+        background-color: #84E4C9;
+        opacity: 1;
+        font: normal normal 600 1.5rem var(--text-font-primary);
+        border-radius: 3rem;
+        padding: 0.5rem 1.8rem 0.5rem 1.8rem;
+        position: relative;
+        border: none;
+        outline: none;
+        border-radius: 3rem;
+        z-index: 1;
+        letter-spacing: 0px;
+        opacity: 0.9;
+        color: #FFFFFF;
+    }
+
+    .pricing-btn::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--text-color-primary-dark);;
+        z-index: -1;
         font: normal normal 600 1.5rem var(--text-font-primary);
         background-color: var(--text-color-primary-dark);
-        color: #ffffff;
         border-radius: 3rem;
         padding: 0.3rem 1.5rem 0.3rem 1.5rem;
+        transition: transform 300ms ease-in-out;
+        transform: scaleX(1) skew(0deg);
+        border-radius: 3rem;
+    }
+
+    .pricing-btn:hover::before,
+    .pricing-btn:active::before,
+    .pricing-btn:focus::before {
+        transform: scaleX(0) skew(90deg);
     }
 
     .pricing-btn:hover,
-    .pricing-btn:active {
-        background-color: var(--text-color-primary-light);
-        color: var(--text-color-primary-dark);
-        border-radius: 3rem;
+    .pricing-btn:active,
+    .pricing-btn:focus{
+        color: #000000;
     }
 
     .team {
@@ -920,7 +1000,7 @@ nav ul li {
 
     .footer {
         background: url(../images/connect/items-bcg.png) no-repeat bottom, url(../images/connect/connect-bcg.png) no-repeat center;
-        background-size:  contain, 110% 110%;
+        background-size: contain, 110% 110%;
         display: grid;
         grid-template-rows: 1fr .1fr;
         justify-items: center;
@@ -1006,9 +1086,42 @@ nav ul li {
     }
 
     .header-btn {
+        letter-spacing: 0px;
+        color: #000000;
+        background-color: var(--text-color-primary-light);
+        opacity: 0.9;
         font: normal normal 600 1rem var(--text-font-primary);
         border-radius: 3rem;
         padding: .2rem .7rem .2rem 1rem;
+        margin-top: 30vh;
+        width: 30vw;
+        height: 10vh;
+        position: relative;
+        border: none;
+        outline: none;
+        border-radius: 3rem;
+        z-index: 1;
+    }
+
+    .header-btn::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: red;
+        z-index: -1;
+        border-top: 20px;
+        transition: transform 200ms;
+        overflow: hidden;
+        transform: scaleX(1) skew(0deg);
+        border-radius: 3rem;
+    }
+
+    .header-btn:hover::before {
+        transform: scaleX(0) skew(90deg);
+        overflow: hidden;
     }
 
     .chat-btn {
