@@ -56,13 +56,13 @@ li a {
 
 .header-li {
     margin-right: 2vw;
-    padding: 0.5rem 1.3rem 0.5rem 1.3rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 .header-li:hover {
     background-color: #56B49B;
     border-radius: 3rem;
-    padding: 0.5rem 1.3rem 0.5rem 1.3rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 .header-ul {
@@ -318,7 +318,7 @@ li a {
     }
 
     li a {
-        font: normal normal 600 .8rem var(--text-font-primary);
+        font: normal normal 600 1vw var(--text-font-primary);
     }
 
     nav ul li {
