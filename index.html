@@ -79,30 +79,34 @@
         </div>
         <div class="register-box" id="registerBox">
             <div class="register-form" id="registerform">
+                <div class="register-close-btn">
                 <button class="register-header-btn" id="register-close"><img
-                        src="./images/home/close-window-32.png"></button>
+                        src="./images/home/Icon material-close.png"></button>
+                    </div>
                 <div class="register-form-line-1">
                     <div class="register-form-div-name">
-                        <label class="register-form-label" for="name">Name</label>
+                        <label class="register-form-label" for="registerName">Name</label>
                         <br />
                         <input id="registerName" name="name" type="text">
                     </div>
                     <div class="register-form-div-email">
-                        <label class="register-form-label" for="register-email">E-mail</label>
+                        <label class="register-form-label" for="registerEmail">E-mail</label>
                         <br />
                         <input id="registerEmail" name="register-email" type="email">
                     </div>
                     <div class="register-form-div-role">
                         <p class="register-form-div-role-p">You describe yourself as ?</p>
-                        <label for="Student" class="register-form-div-checkbox-label"><input type="radio" id="Student"
-                                name="role" value="Student">Student</label>
-                        <label for="Educator" class="register-form-div-checkbox-label"><input type="radio" id="Educator"
-                                name="role" value="Educator">Educator</label>
-                        <label for="Institute" class="register-form-div-checkbox-label"><input type="radio"
-                                id="Institute" name="role" value="Institute">Institute</label>
+                        <div class="checkbox-div">
+                            <label for="Student" class="register-form-div-checkbox-label"><input type="radio"
+                                    id="Student" name="role" value="Student">Student</label>
+                            <label for="Educator" class="register-form-div-checkbox-label"><input type="radio"
+                                    id="Educator" name="role" value="Educator">Educator</label>
+                            <label for="Institute" class="register-form-div-checkbox-label"><input type="radio"
+                                    id="Institute" name="role" value="Institute">Institute</label>
+                        </div>
                     </div>
                 </div>
-                <div>
+                <div class="register-btn">
                     <button class="register-form-div-btn btn" id="registerBtn">Register</button>
                 </div>
             </div>
@@ -124,7 +128,7 @@
         <main class="main-container" id='home'>
             <section class="home">
                 <div class="black-layer">
-                    <div class="home-container-div" >
+                    <div class="home-container-div">
                         <div class="home-div-text">
                             <p class="home-div-text-1">Just like classroom.</p>
                             <p class="home-div-text-2">Even Better!</p>
@@ -137,26 +141,31 @@
             </section>
 
             <section class="about">
-                <div class="about-div-1" id="about"> 
-                    <div class="about-div-main-text">
-                        <p class="about-div-1-main-text">A Complete Academic Solution for All</p>
-                    </div>
-                    <div class="about-div-1-mid-text-container">
-                        <div class="about-div-1-mid-text1">
-                            <img class="about-div-1-mid-img" src="./images/about/pixeltrue-icons-discount-1@2x.png" />
-                            <p class="about-div-1-mid-text">Independent educators, academic institute owners or
-                                students aspiring for various goals
-                                in their life, KaliDro presents a complete solution for all.</p>
+                <div class="about-div-1">
+                    <div class="about-place" id="about">
+                        <div class="about-div-main-text">
+                            <p class="about-div-1-main-text">A Complete Academic Solution for All</p>
                         </div>
-                        <div class="about-div-1-mid-text2">
-                            <img class="about-div-1-mid-img" src="./images/about/pixeltrue-icons-seo-optimize-1.png" />
-                            <p class="about-div-1-mid-text">We are here to help you adapt your academic and professional
-                                needs against COVID 19 and
-                                in line with the government's new education policy.</p>
+                        <div class="about-div-1-mid-text-container">
+                            <div class="about-div-1-mid-text1">
+                                <img class="about-div-1-mid-img"
+                                    src="./images/about/pixeltrue-icons-discount-1@2x.png" />
+                                <p class="about-div-1-mid-text">Independent educators, academic institute owners or
+                                    students aspiring for various goals
+                                    in their life, KaliDro presents a complete solution for all.</p>
+                            </div>
+                            <div class="about-div-1-mid-text2">
+                                <img class="about-div-1-mid-img"
+                                    src="./images/about/pixeltrue-icons-seo-optimize-1.png" />
+                                <p class="about-div-1-mid-text">We are here to help you adapt your academic and
+                                    professional
+                                    needs against COVID 19 and
+                                    in line with the government's new education policy.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="about-div-1-last-text">
-                        <p>Together with Aatmnirbhar Bharat, let us make INDIA great again.</p>
+                        <div class="about-div-1-last-text">
+                            <p>Together with Aatmnirbhar Bharat, let us make INDIA great again.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -230,7 +239,7 @@
                 </div>
             </section>
 
-            <section class="feature" >
+            <section class="feature">
                 <div class="feature-div-btn" id="feature">
                     <button class="btn feature-slide-btn  feature-slide-btn-active"
                         id="feature-slideBtn-1">Institutes</button>
@@ -291,7 +300,7 @@
                 </div>
             </section>
 
-            <section class="team" >
+            <section class="team">
                 <div class="team-container-div" id="team">
                     <div class="team-div-text">
                         <p class="team-div-text-1">Our Team</p>
