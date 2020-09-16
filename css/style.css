@@ -9,13 +9,16 @@ body {
     margin: 0px;
     padding: 0px;
     text-align: center;
-
+    scroll-snap-type: mandatory;
+    overflow-x: hidden;
 }
 
 .btn {
     border: none;
     outline: none;
 }
+
+
 
 .home,
 .about1,
@@ -38,7 +41,7 @@ body {
     opacity: 0.8;
     top: 0px;
     left: 0px;
-    width: 100vw;
+    width: 100%;
     display: grid;
     color: white;
     z-index: 5;
@@ -966,6 +969,7 @@ li a {
         justify-items: center;
         align-items: center;
         margin-top: 15vh;
+        column-gap: 0;
     }
 
     .team-main-1-text-1,
@@ -1001,8 +1005,8 @@ li a {
     }
 
     .team-div-img {
-        width: 11rem;
-        height: 11rem;
+        width: 8rem;
+        height: 8rem;
         border-radius: 50%;
         border: none;
         box-shadow: 0 0 .7rem .4rem #888888;
