@@ -318,7 +318,7 @@ li a {
     }
 
     li a {
-        font: normal normal 600 1rem var(--text-font-primary);
+        font: normal normal 600 .8rem var(--text-font-primary);
     }
 
     nav ul li {
