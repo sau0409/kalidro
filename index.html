@@ -16,7 +16,7 @@
         <div class="header-logo">
             <a href="#home">
                 <figure class="logo-figure">
-                    <svg id="Layer_2" viewBox="150 0 50 90" width="200" height="40">
+                    <svg id="Layer_2" viewBox="150 0 50 90" width="220" height="50">
                         <path class="cls-1"
                             d="M248.47,256.83v66.34h5V256.83a7.5,7.5,0,0,1,7.5-7.5h69.87v7.87h-57a12.52,12.52,0,0,0-12.5,12.5v53.47h5V269.7a7.52,7.52,0,0,1,7.5-7.5h57v8.39H287.23a12.52,12.52,0,0,0-12.5,12.5v40.08h5V283.09a7.52,7.52,0,0,1,7.5-7.5h43.61v9H301.26a12.52,12.52,0,0,0-12.5,12.5v26.05h5V297.12a7.52,7.52,0,0,1,7.5-7.5h29.58v33.55h5V244.33H261A12.52,12.52,0,0,0,248.47,256.83Z"
                             transform="translate(-248.47 -238.99)" />
@@ -77,49 +77,52 @@
                 <br />
             </div>
         </div>
-        <div class="register-box" id="registerBox">
-            <div class="register-close-btn">
-                <button class="register-header-btn" id="register-close"><img class="register-close-img"
-                        src="./images/home/Icon material-close.png"></button>
-            </div>
-            <div class="register-form" id="registerform">
-                <div class="register-form-line-1">
-                    <div class="register-form-div-name">
-                        <label class="register-form-label" for="registerName">Name</label>
-                        <br />
-                        <input id="registerName" name="name" type="text">
-                    </div>
-                    <div class="register-form-div-email">
-                        <label class="register-form-label" for="registerEmail">E-mail</label>
-                        <br />
-                        <input id="registerEmail" name="register-email" type="email">
-                    </div>
-                    <div class="register-form-div-role">
-                        <p class="register-form-div-role-p">You describe yourself as ?</p>
-                        <div class="checkbox-div">
-                            <label for="Student" class="register-form-div-checkbox-label"><input type="radio"
-                                    id="Student" class="radio-btn" name="role" value="Student">Student</label>
-                            <label for="Educator" class="register-form-div-checkbox-label"><input type="radio"
-                                    id="Educator" class="radio-btn" name="role" value="Educator">Educator</label>
-                            <label for="Institute" class="register-form-div-checkbox-label"><input type="radio"
-                                    id="Institute" class="radio-btn" name="role" value="Institute">Institute</label>
+        <div class="regiter-box-overlay">
+            <div class="register-box" id="registerBox">
+                <div class="regiter-box-overlay"></div>
+                <div class="register-close-btn">
+                    <button class="register-header-btn" id="register-close"><img class="register-close-img"
+                            src="./images/home/Icon material-close.png"></button>
+                </div>
+                <div class="register-form" id="registerform">
+                    <div class="register-form-line-1">
+                        <div class="register-form-div-name">
+                            <label class="register-form-label" for="registerName">Name</label>
+                            <br />
+                            <input id="registerName" name="name" type="text">
+                        </div>
+                        <div class="register-form-div-email">
+                            <label class="register-form-label" for="registerEmail">E-mail</label>
+                            <br />
+                            <input id="registerEmail" name="register-email" type="email">
+                        </div>
+                        <div class="register-form-div-role">
+                            <p class="register-form-div-role-p">You describe yourself as ?</p>
+                            <div class="checkbox-div">
+                                <label for="Student" class="register-form-div-checkbox-label"><input type="radio"
+                                        id="Student" class="radio-btn" name="role" value="Student">Student</label>
+                                <label for="Educator" class="register-form-div-checkbox-label"><input type="radio"
+                                        id="Educator" class="radio-btn" name="role" value="Educator">Educator</label>
+                                <label for="Institute" class="register-form-div-checkbox-label"><input type="radio"
+                                        id="Institute" class="radio-btn" name="role" value="Institute">Institute</label>
+                            </div>
                         </div>
                     </div>
+                    <div class="register-btn">
+                        <button class="register-form-div-btn btn" id="registerBtn">Register</button>
+                    </div>
                 </div>
-                <div class="register-btn">
-                    <button class="register-form-div-btn btn" id="registerBtn">Register</button>
-                </div>
-            </div>
-            <div class="register-succ" id="registerSucc">
-                <div class="register-succ-line-1">
-                    <p>Congrats!</p>
-                </div>
-                <div class="register-succ-line-2">
-                    <p>You have successfully registered for our beta program.</p>
-                </div>
-                <div>
-                    <a href="#"><button class="register-succ-btn btn" id="exploreBtn">Explore</button></a>
-                    <p class="register-succ-line-3">To explore our website click here</p>
+                <div class="register-succ" id="registerSucc">
+                    <div class="register-succ-line-1">
+                        <p>Congrats!</p>
+                    </div>
+                    <div class="register-succ-line-2">
+                        <p>You have successfully registered for our beta program.</p>
+                    </div>
+                    <div>
+                        <a href="#feature"><button class="register-succ-btn btn" id="exploreBtn">Explore</button></a>
+                        <p class="register-succ-line-3">To explore our website click here</p>
+                    </div>
                 </div>
             </div>
         </div>
