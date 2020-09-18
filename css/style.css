@@ -1081,7 +1081,7 @@ li a {
         background: url(../images/connect/items-bcg.png) no-repeat bottom, url(../images/connect/connect-bcg.png) no-repeat center;
         background-size: 110% 30%, 110% 110%;
         display: grid;
-        grid-template-rows: .8fr .2fr;
+        grid-template-rows: 2fr .1fr;
         justify-items: center;
     }
 
@@ -1208,7 +1208,8 @@ li a {
         justify-items: center;
         color: white;
         text-align: start;
-        align-items: center;
+        align-items: flex-end;
+        align-self: flex-end;
     }
 
 }
@@ -1993,7 +1994,7 @@ li a {
         background: url(../images/connect/items-bcg.png) no-repeat bottom, url(../images/connect/connect-bcg.png) no-repeat center;
         background-size: 110% 30%, 110% 110%;
         display: grid;
-        grid-template-rows: .8fr .2fr;
+        grid-template-rows: 2fr .1fr;
         justify-items: center;
     }
 
@@ -2119,7 +2120,8 @@ li a {
         justify-items: center;
         color: white;
         text-align: start;
-        align-items: center;
+        align-items: flex-end;
+        align-self: flex-end;
     }
 
 }
@@ -2906,7 +2908,7 @@ li a {
         background: url(../images/connect/items-bcg.png) no-repeat bottom, url(../images/connect/connect-bcg.png) no-repeat center;
         background-size: 110% 30%, 110% 110%;
         display: grid;
-        grid-template-rows: .8fr .2fr;
+        grid-template-rows: 2fr .1fr;
         justify-items: center;
     }
 
@@ -3032,7 +3034,8 @@ li a {
         justify-items: center;
         color: white;
         text-align: start;
-        align-items: center;
+        align-items: flex-end;
+        align-self: flex-end;
     }
 
 }
@@ -3812,7 +3815,7 @@ li a {
         background: url(../images/connect/items-bcg.png) no-repeat bottom, url(../images/connect/connect-bcg.png) no-repeat center;
         background-size: 110% 30%, 110% 110%;
         display: grid;
-        grid-template-rows: .8fr .2fr;
+        grid-template-rows: 2fr .1fr;
         justify-items: center;
     }
 
@@ -3992,7 +3995,8 @@ li a {
         justify-items: center;
         color: white;
         text-align: start;
-        align-items: center;
+        align-items: flex-end;
+        align-self: flex-end;
     }
 
 }
@@ -4762,7 +4766,7 @@ li a {
         background: url(../images/connect/items-bcg.png) no-repeat bottom, url(../images/connect/connect-bcg.png) no-repeat center;
         background-size: 110% 30%, 110% 110%;
         display: grid;
-        grid-template-rows: .8fr .2fr;
+        grid-template-rows: 2fr .2fr;
         justify-items: center;
     }
 
@@ -4888,7 +4892,8 @@ li a {
         justify-items: center;
         color: white;
         text-align: start;
-        align-items: center;
+        align-items: flex-end;
+        align-self: flex-end;
     }
 
 }
@@ -5660,7 +5665,7 @@ li a {
         background: url(../images/connect/items-bcg.png) no-repeat bottom, url(../images/connect/connect-bcg.png) no-repeat center;
         background-size: 110% 30%, 110% 110%;
         display: grid;
-        grid-template-rows: .8fr .2fr;
+        grid-template-rows: 2fr .1fr;
         justify-items: center;
     }
 
@@ -5786,7 +5791,8 @@ li a {
         justify-items: center;
         color: white;
         text-align: start;
-        align-items: center;
+        align-items: flex-end;
+        align-self: flex-end;
     }
 
 }
