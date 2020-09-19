@@ -78,10 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    //add listner on register buttin
+    //add listner on register button
 
     function moveRegisterBox() {
-        console.log("moving Btns");
         let registerBox = document.getElementById("registerBox");
         registerBox.style.display = "block";
         registerBox.classList.add("register-box-anim");
@@ -92,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
     registerBtns.forEach((el, index) => {
 
         el.addEventListener("click", () => {
-            console.log("listened");
             moveRegisterBox();
         });
     });
@@ -343,12 +341,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     var isInViewport = function (elem) {
+        console.log("in scroll");
         var bounding = elem.getBoundingClientRect();
+        console.log(bounding.bottom - 10);
+        console.log(window.innerHeight);
+        console.log(window.innerWidth);
+        console.log(document.documentElement.clientHeight);
+        console.log(document.documentElement.clientWidth);
         return (
             bounding.top >= 0 &&
             bounding.left >= 0 &&
-            bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+            (bounding.bottom - 100) <= (window.innerHeight || document.documentElement.clientHeight) &&
+            (bounding.right - 100) <= (window.innerWidth || document.documentElement.clientWidth)
         );
     };
 
@@ -357,6 +361,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function windowScrollListner() {
         window.addEventListener("scroll", function () {
             if (isInViewport(instituteDiv) && scrollEvevnt == 0) {
+                console.log("scroll read");
                 myFeatureList1Move();
                 scrollEvevnt = 1;
             }
@@ -368,8 +373,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // function to change image and list items in feature div 1
+    let list1CLickable = false;
+    let autolist1Count = 0;
 
     function myFeatureList1Move() {
+        
+        if(autolist1Count == 0) {
 
         setTimeout(() => {
             document.getElementById('feature-div-1-list-1').innerText = " ";
@@ -380,7 +389,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             let newImg = document.createElement("img");
             document.getElementById("feature-div-1-img").appendChild(newImg);
-            newImg.classList.add("feature-div-1-img-1", "feature-div-1", "featImgOut");
+            newImg.classList.add("feature-div-1-img-1", "feature-div-1", "featImgOut2");
             newImg.setAttribute("id", "institute-img");
             document.getElementById("institute-img").src = instituteImgArr[0];
 
@@ -429,7 +438,12 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('feature-div-1-list-4').innerText = instituetListArr[3];
             document.getElementById('feature-div-1-list-5').innerText = instituetListArr[4];
             document.getElementById("institute-img").src = instituteImgArr[2];
+            list1CLickable = true;
         }, 10000);
+
+        autolist1Count = 1;
+
+    }
 
     }
 
@@ -441,6 +455,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         el.addEventListener("click", () => {
 
+            if(list1CLickable) {
+
             featDivList.forEach(ele => {
                 ele.setAttribute("style", `
                 opacity: 0.4;
@@ -451,26 +467,32 @@ document.addEventListener("DOMContentLoaded", () => {
             el.setAttribute("style", `
             opacity: 1;
             background-color: #BEE8DC;
-    border-radius: 25px;
+    border-radius: 3rem;
     color: #124F3F;
             `);
             document.getElementById("institute-img").remove();
             let newImg = document.createElement("img");
             document.getElementById("feature-div-1-img").appendChild(newImg);
-            newImg.classList.add("feature-div-1-img-1", "feat-div-1", "featImgOut");
+            newImg.classList.add("feature-div-1-img-1", "feat-div-1");
             newImg.setAttribute("id", "institute-img");
             elText = el.textContent;
             let imInd = instituetListArr.indexOf(elText);
             document.getElementById("institute-img").src = instituteImgArr[imInd];
+
+
+        }
         });
 
     });
 
 
 
-    // function to change image and list items in feature div 1
+    // function to change image and list items in feature div 3
+    let list2CLickable = false;
+    let autolist2Count = 0;
 
     function myFeatureList2Move() {
+        if(autolist2Count === 0) {
 
         setTimeout(() => {
             console.log("slide1");
@@ -482,7 +504,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             let newImg = document.createElement("img");
             document.getElementById("feature-div-2-img").appendChild(newImg);
-            newImg.classList.add("feature-div-2-img-1", "feature-div-1", "featImgOut");
+            newImg.classList.add("feature-div-2-img-1", "feature-div-1", "featImgOut2");
             newImg.setAttribute("id", "educator-img");
             document.getElementById("educator-img").src = educatorImgArr[0];
 
@@ -532,7 +554,11 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('feature-div-2-list-4').innerText = educatorListArr[3];
             document.getElementById('feature-div-2-list-5').innerText = educatorListArr[4];
             document.getElementById("educator-img").src = educatorImgArr[2];
+            list2CLickable = true;
         }, 10000);
+
+        autolist2Count = 1;
+    }
 
     }
 
@@ -544,6 +570,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         el.addEventListener("click", () => {
 
+            if(list2CLickable) {
+
             featDiv2List.forEach(ele => {
                 ele.setAttribute("style", `
                 opacity: 0.4;
@@ -554,17 +582,18 @@ document.addEventListener("DOMContentLoaded", () => {
             el.setAttribute("style", `
             opacity: 1;
             background-color: #BEE8DC;
-    border-radius: 25px;
+    border-radius: 3rem;
     color: #124F3F;
             `);
             document.getElementById("educator-img").remove();
             let newImg = document.createElement("img");
             document.getElementById("feature-div-2-img").appendChild(newImg);
-            newImg.classList.add("feature-div-2-img-1", "feat-div-1", "featImgOut");
+            newImg.classList.add("feature-div-2-img-1", "feat-div-1");
             newImg.setAttribute("id", "educator-img");
             elText = el.textContent;
             let imInd = educatorListArr.indexOf(elText);
             document.getElementById("educator-img").src = educatorImgArr[imInd];
+        }
         });
 
     });

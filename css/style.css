@@ -285,10 +285,11 @@ li a {
 
 }
 
-.featImgOut {
+
+.featImgOut2 {
     animation-name: fadeOut2;
     animation-duration: 2000ms;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease-in;
     animation-iteration-count: 5;
 }
 
@@ -301,8 +302,6 @@ li a {
         opacity: 0.2;
     }
 }
-
-
 
 
 
@@ -5474,7 +5473,6 @@ li a {
     .feature-div-1-img-container,
     .feature-div-2-img-container,
     .feature-div-3-img-container {
-        justify-self: center;
         width: 35vw;
         height: 35vh;
         padding: auto;
@@ -5485,25 +5483,21 @@ li a {
     .feature-div-1-list-container,
     .feature-div-2-list-container,
     .feature-div-3-list-container {
-        justify-self: center;
         width: 50vw;
-        height: 30vh;
+        height: 50vh;
         text-align: center;
-        font: normal normal bold 2rem var(--text-font-primary);
-        letter-spacing: 0px;
-        opacity: 1;
-
+        padding: 0rem 1rem;
     }
 
     .feature-div-1-list,
     .feature-div-2-list,
     .feature-div-3-list {
         text-align: center;
-        font: normal normal 600 1.5rem var(--text-font-primary);
+        font: normal normal 600 2vw/8vh var(--text-font-primary);
         letter-spacing: 0px;
-        padding: .5rem;
-        margin: .5rem;
-        height: 6vh;
+        border-radius: 3rem;
+        height: 8vh;
+        margin-top: -1vh;
     }
 
     .pricing-container-div {
