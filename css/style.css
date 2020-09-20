@@ -29,7 +29,7 @@ body {
     height: 100vh;
     width: 100vw;
     border: solid;
-    border-color: #FFFFFF;
+    border-color: transparent;
     border-width: 0.01px;
 }
 
@@ -524,7 +524,7 @@ li a {
     .register-succ {
         display: none;
         margin-top: -2rem;
-					  
+
     }
 
     .checkbox-div {
@@ -626,11 +626,11 @@ li a {
         font: normal normal bold 2.5rem var(--text-font-secondary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
-						 
+        margin-top: -5vh;
     }
 
     .register-succ-line-2 {
-        font: normal normal normal 2rem var(--text-font-primary);
+        font: normal normal medium 2rem var(--text-font-primary);
         margin: -1.5rem 3rem 0rem 3rem;
         letter-spacing: 0px;
         color: #000000;
@@ -722,9 +722,9 @@ li a {
     }
 
 
-				  
-						  
-	 
+
+
+
 
     .about-place {
         padding-top: 10vh;
@@ -900,13 +900,13 @@ li a {
     .feature-div-1-list-container,
     .feature-div-2-list-container,
     .feature-div-3-list-container {
-        justify-self: center;
+
         width: 50vw;
-        height: 30vh;
+        height: 50vh;
         text-align: center;
-        font: normal normal bold 2rem var(--text-font-primary);
-        letter-spacing: 0px;
-        opacity: 1;
+        padding: 0rem 1rem;
+
+
 
     }
 
@@ -914,11 +914,11 @@ li a {
     .feature-div-2-list,
     .feature-div-3-list {
         text-align: center;
-        font: normal normal 600 1.5rem var(--text-font-primary);
+        font: normal normal 600 2vw/8vh var(--text-font-primary);
         letter-spacing: 0px;
-        padding: .5rem;
-        margin: .5rem;
-        height: 6vh;
+        border-radius: 3rem;
+        height: 8vh;
+        margin-top: -1vh;
     }
 
     .pricing-container-div {
@@ -1171,7 +1171,7 @@ li a {
         border: solid;
     }
 
-    
+
     .footer-items-div {
         width: 100vw;
     }
@@ -1188,8 +1188,7 @@ li a {
         font: normal normal bold 0.6rem var(--text-font-primary);
         letter-spacing: 0px;
         color: white;
-        margin-top: auto;
-		margin-top: 5vh;				
+        margin-top: 5vh;
     }
 
     .footer-item-2-text-1 {
@@ -1212,6 +1211,7 @@ li a {
     }
 
 }
+
 
 
 
@@ -1432,9 +1432,10 @@ li a {
     }
 
     .register-succ {
-						  
+
         display: none;
         margin-top: -2rem;
+
     }
 
     .checkbox-div {
@@ -1544,7 +1545,7 @@ li a {
         font: normal normal bold 2.5rem var(--text-font-secondary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
-		margin-top: -5vh;				 
+        margin-top: -5vh;
     }
 
     .register-succ-line-2 {
@@ -1722,7 +1723,7 @@ li a {
     .slide-div-bcg-div {
         background: url(../images//about//about2-bcg.png) no-repeat;
         background-position: bottom right;
-		background-size: 100% 120%;						   
+        background-size: 100% 120%;
         width: 100vw;
         height: 100vh;
     }
@@ -1813,13 +1814,13 @@ li a {
     .feature-div-1-list-container,
     .feature-div-2-list-container,
     .feature-div-3-list-container {
-        justify-self: center;
+
         width: 50vw;
-        height: 30vh;
+        height: 50vh;
         text-align: center;
-        font: normal normal bold 2rem var(--text-font-primary);
-        letter-spacing: 0px;
-        opacity: 1;
+        padding: 0rem 1rem;
+
+
 
     }
 
@@ -1827,11 +1828,11 @@ li a {
     .feature-div-2-list,
     .feature-div-3-list {
         text-align: center;
-        font: normal normal 600 1.5rem var(--text-font-primary);
+        font: normal normal 600 2vw/8vh var(--text-font-primary);
         letter-spacing: 0px;
-        padding: .5rem;
-        margin: .5rem;
-        height: 6vh;
+        border-radius: 3rem;
+        height: 8vh;
+        margin-top: -1vh;
     }
 
     .pricing-container-div {
@@ -2101,7 +2102,8 @@ li a {
         font: normal normal bold 0.6rem var(--text-font-primary);
         letter-spacing: 0px;
         color: white;
-		margin-top: 5vh;				
+
+        margin-top: 5vh;
     }
 
     .footer-item-2-text-1 {
@@ -2317,7 +2319,7 @@ li a {
         background-position: top right;
 
         display: none;
-        border-radius: 1.5rem;
+        border-radius: 1rem;
         box-shadow: 0 0 .3rem .2rem #ffffff;
     }
 
@@ -2344,9 +2346,10 @@ li a {
     }
 
     .register-succ {
-						  
+
         display: none;
         margin-top: -2rem;
+
     }
 
     .checkbox-div {
@@ -2457,7 +2460,7 @@ li a {
         font: normal normal bold 2.5rem var(--text-font-secondary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
-		margin-top: -4vh;				 
+        margin-top: -4vh;
     }
 
     .register-succ-line-2 {
@@ -2716,7 +2719,6 @@ li a {
     .feature-div-1-img-container,
     .feature-div-2-img-container,
     .feature-div-3-img-container {
-        justify-self: center;
         width: 35vw;
         height: 35vh;
         padding: auto;
@@ -2727,13 +2729,13 @@ li a {
     .feature-div-1-list-container,
     .feature-div-2-list-container,
     .feature-div-3-list-container {
-        justify-self: center;
+
         width: 50vw;
-        height: 30vh;
+        height: 50vh;
         text-align: center;
-        font: normal normal bold 2rem var(--text-font-primary);
-        letter-spacing: 0px;
-        opacity: 1;
+        padding: 0rem 1rem;
+
+
 
     }
 
@@ -2741,11 +2743,11 @@ li a {
     .feature-div-2-list,
     .feature-div-3-list {
         text-align: center;
-        font: normal normal 600 1.5rem var(--text-font-primary);
+        font: normal normal 600 2vw/8vh var(--text-font-primary);
         letter-spacing: 0px;
-        padding: .5rem;
-        margin: .5rem;
-        height: 6vh;
+        border-radius: 3rem;
+        height: 8vh;
+        margin-top: -1vh;
     }
 
     .pricing-container-div {
@@ -3015,7 +3017,7 @@ li a {
         letter-spacing: 0px;
         color: white;
         margin-top: auto;
-		margin-top: 4vh;				
+        margin-top: 4vh;
     }
 
     .footer-item-2-text-1 {
@@ -3026,7 +3028,7 @@ li a {
         font: normal normal bold 0.8rem var(--text-font-primary);
     }
 
-   .footer-items {
+    .footer-items {
         letter-spacing: 0px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -3253,9 +3255,10 @@ li a {
     }
 
     .register-succ {
-						  
+
         display: none;
         margin-top: -2rem;
+
     }
 
     .checkbox-div {
@@ -3365,7 +3368,7 @@ li a {
         font: normal normal bold 2.5rem var(--text-font-secondary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
-						 
+        margin-top: -5vh;
     }
 
     .register-succ-line-2 {
@@ -3623,7 +3626,6 @@ li a {
     .feature-div-1-img-container,
     .feature-div-2-img-container,
     .feature-div-3-img-container {
-        justify-self: center;
         width: 35vw;
         height: 35vh;
         padding: auto;
@@ -3634,13 +3636,13 @@ li a {
     .feature-div-1-list-container,
     .feature-div-2-list-container,
     .feature-div-3-list-container {
-        justify-self: center;
+
         width: 50vw;
-        height: 30vh;
+        height: 50vh;
         text-align: center;
-        font: normal normal bold 2rem var(--text-font-primary);
-        letter-spacing: 0px;
-        opacity: 1;
+        padding: 0rem 1rem;
+
+
 
     }
 
@@ -3648,11 +3650,11 @@ li a {
     .feature-div-2-list,
     .feature-div-3-list {
         text-align: center;
-        font: normal normal 600 1.5rem var(--text-font-primary);
+        font: normal normal 600 2vw/8vh var(--text-font-primary);
         letter-spacing: 0px;
-        padding: .5rem;
-        margin: .5rem;
-        height: 6vh;
+        border-radius: 3rem;
+        height: 8vh;
+        margin-top: -1vh;
     }
 
     .pricing-container-div {
@@ -3905,60 +3907,6 @@ li a {
         border: solid;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     .footer-items-div {
         width: 100vw;
     }
@@ -3976,7 +3924,7 @@ li a {
         letter-spacing: 0px;
         color: white;
         margin-top: auto;
-		margin-top: 5vh;				
+        margin-top: 5vh;
     }
 
     .footer-item-2-text-1 {
@@ -3999,6 +3947,7 @@ li a {
     }
 
 }
+
 
 
 @media (max-width: 2220px) {
@@ -4213,6 +4162,7 @@ li a {
     }
 
     .register-succ {
+
         margin-top: -2rem;
         display: none;
     }
@@ -4574,7 +4524,6 @@ li a {
     .feature-div-1-img-container,
     .feature-div-2-img-container,
     .feature-div-3-img-container {
-        justify-self: center;
         width: 35vw;
         height: 35vh;
         padding: auto;
@@ -4585,13 +4534,13 @@ li a {
     .feature-div-1-list-container,
     .feature-div-2-list-container,
     .feature-div-3-list-container {
-        justify-self: center;
+
         width: 50vw;
-        height: 30vh;
+        height: 50vh;
         text-align: center;
-        font: normal normal bold 2rem var(--text-font-primary);
-        letter-spacing: 0px;
-        opacity: 1;
+        padding: 0rem 1rem;
+
+
 
     }
 
@@ -4599,11 +4548,11 @@ li a {
     .feature-div-2-list,
     .feature-div-3-list {
         text-align: center;
-        font: normal normal 600 1.5rem var(--text-font-primary);
+        font: normal normal 600 2vw/8vh var(--text-font-primary);
         letter-spacing: 0px;
-        padding: .5rem;
-        margin: .5rem;
-        height: 6vh;
+        border-radius: 3rem;
+        height: 8vh;
+        margin-top: -1vh;
     }
 
     .pricing-container-div {
@@ -4765,7 +4714,7 @@ li a {
         background: url(../images/connect/items-bcg.png) no-repeat bottom, url(../images/connect/connect-bcg.png) no-repeat center;
         background-size: 110% 30%, 110% 110%;
         display: grid;
-        grid-template-rows: 2fr .2fr;
+        grid-template-rows: 2fr .1fr;
         justify-items: center;
     }
 
@@ -5113,7 +5062,7 @@ li a {
     .register-succ {
         display: none;
         margin-top: -2rem;
-					  
+
     }
 
     .checkbox-div {
@@ -5215,7 +5164,7 @@ li a {
         font: normal normal bold 3.5rem var(--text-font-secondary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
-		margin-top: -5vh;				 
+        margin-top: -5vh;
     }
 
     .register-succ-line-2 {
@@ -5262,7 +5211,7 @@ li a {
         opacity: 1;
         font: normal normal bold 1.2rem var(--text-font-primary);
         border-radius: 3rem;
-       padding: .5rem 1.4rem .5rem 1.4rem;
+        padding: .5rem 1.4rem .5rem 1.4rem;
         position: relative;
         border: none;
         outline: none;
@@ -5296,7 +5245,7 @@ li a {
     }
 
 
-.about {
+    .about {
 
         background: url(../images/about/about-bcg.png) no-repeat;
         background-position: top;
@@ -5767,7 +5716,7 @@ li a {
         letter-spacing: 0px;
         color: white;
         margin-top: auto;
-		margin-top: 5vh;				
+        margin-top: 5vh;
     }
 
     .footer-item-2-text-1 {
@@ -5793,50 +5742,57 @@ li a {
 
 
 
-@media (max-width: 820px) {
+@media (max-width: 620px) {
 
     :root {
-        font-size: 3vw;
+        font-size: 2vh;
     }
 
+
+
     .header {
-        display: block;
-        padding: .5rem;
-        position: static;
         border-bottom-right-radius: 0rem;
         border-bottom-left-radius: 0rem;
+        display: block;
+        position: fixed;
+        height: auto;
+        align-items: center;
+        justify-items: center;
+    }
+
+
+    .header-nav {
+        display: none;
     }
 
     .header-div-btn {
         display: none;
     }
 
-    .header-nav {
-        display: none;
-    }
 
 
     .cls-2 {
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-family: ACaslonPro-Bold, Adobe Caslon Pro;
         font-weight: 700;
     }
 
     .cls-12 {
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-family: Gelion-Medium, Gelion;
         font-weight: 500;
         letter-spacing: 0.15em;
     }
+
 
     .chat-btn {
         border: none;
         outline: none;
         background-color: transparent;
         position: fixed;
-        bottom: 8vh;
+        bottom: 7vh;
         right: 5vw;
-        z-index: 2;
+        z-index: 4;
         border-radius: 3rem;
     }
 
@@ -5845,18 +5801,19 @@ li a {
         border: none;
         outline: none;
         background-color: white;
+
     }
 
 
     .chat-img {
-        max-width: 20vw;
-        max-height: 20vh;
+        max-width: 30vw;
+        max-height: 25vh;
         border-radius: 3rem;
     }
 
     .chat-popup {
         width: 50vw;
-        height: 40vh;
+        height: 50vh;
         background-color: #99ffcc;
         border: none;
         position: fixed;
@@ -5864,15 +5821,19 @@ li a {
         right: 5vw;
         z-index: 4;
         display: none;
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
     }
 
     .chat-header {
         background-color: #b3abff;
-        font: normal normal 600 1rem var(--text-font-primary);
+        font: normal normal 600 1.2rem var(--text-font-primary);
         letter-spacing: 0px;
         color: #000000;
         display: grid;
-        grid-template-columns: .6fr .4fr;
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
+        grid-template-columns: .7fr .3fr;
         align-items: center;
 
     }
@@ -5894,7 +5855,7 @@ li a {
 
     .chat-screen {
         width: 50vw;
-        height: 30vh;
+        height: 40vh;
         background-color: white;
         overflow: scroll;
     }
@@ -5903,32 +5864,41 @@ li a {
 
     .chat-screen-text-input {
         box-sizing: border-box;
-        width: 43vw;
+        width: 45vw;
         height: 10vh;
         border: none;
         resize: none;
         outline: none;
         background-color: #FFF7AB;
+        font-size: 1rem;
     }
 
     .chat-screen-text-output {
         box-sizing: border-box;
-        width: 16vw;
+        width: 45vw;
         height: 10vh;
         border: none;
         resize: none;
         outline: none;
         background-color: #00000033;
+        font-size: 1rem;
     }
 
+    .chat-close-img {
+        width: 3vw;
+        height: 2vh;
+        padding-right: 1vw;
+        padding-top: 1vh;
+    }
+
+
     .register-box {
-        width: 70vw;
+        width: 78%;
         height: auto;
-        background-color: #E2FEF6;
         position: fixed;
-        top: 30%;
-        left: 15%;
-        padding: .3rem;
+        bottom: 20%;
+        right: 8%;
+        padding: .7rem;
         z-index: 4;
         background: url(../images/home/register-box.png) no-repeat;
         background-size: contain;
@@ -5936,6 +5906,13 @@ li a {
         background-color: #E2FEF6;
         display: none;
         border-radius: 1rem;
+        box-shadow: 0 0 .3rem .2rem #ffffff;
+    }
+
+    .register-form-div-email,
+    .register-form-div-name {
+        text-align: start;
+        padding: .3rem .3rem;
     }
 
     .register-box-anim {
@@ -5954,87 +5931,89 @@ li a {
         }
     }
 
+    
+
 
     .register-succ {
         display: none;
-        padding: .5rem;
+        margin-top: -2rem;
+
     }
 
-    .register-form {
-        padding: .5rem;
+    .checkbox-div {
+        margin-top: -.4rem;
+    }
+
+    .register-btn {
+        padding: .6rem;
     }
 
     #registerEmail {
-        width: 98%;
-        border-radius: 20px;
+        width: 95%;
+        font-size: 1.2rem;
+        border-radius: 3rem;
+        border: solid;
+        border-width: .1rem;
         outline: none;
-        border: none;
-        margin-left: 2px;
-        margin-bottom: 10px;
-        font-size: 14px;
+        padding: .5rem 2.5% .5rem 2.5%;
+        margin: auto;
     }
 
     #registerName {
-        width: 98%;
-        border-radius: 20px;
-        outline: none;
-        border: none;
-        margin-left: 2px;
-        margin-bottom: 10px;
-        font-size: 14px;
-    }
-
-
-    .register-form-div-email,
-    .register-form-div-name {
+        width: 95%;
+        font-size: 1.2rem;
+        border-radius: 3rem;
         border: solid;
-        border-width: 1.5px;
-        border-radius: 20px;
-        position: relative;
-        margin: 20px;
-    }
-
-    .register-form-div-message {
-        height: 70px;
-        margin-top: 15px;
+        border-width: .1rem;
+        outline: none;
+        padding: .5rem 2.5% .5rem 2.5%;
     }
 
 
     .register-form-label {
-        position: absolute;
-        bottom: 37px;
-        left: 20px;
         background-color: #E2FEF6;
-        font: normal normal normal 14px var(--text-font-primary);
+        font: normal normal normal .9rem var(--text-font-primary);
     }
 
     .register-form-div-role-p {
 
-        font: normal normal normal 12px var(--text-font-primary);
+        font: normal normal normal .7rem var(--text-font-primary);
     }
 
     .register-form-div-checkbox-label {
-        font: normal normal normal 14px var(--text-font-primary);
+        font: normal normal normal 1rem var(--text-font-primary);
     }
 
+    .radio-btn {
+
+        width: 2vw;
+        height: 2vh;
+    }
+
+
     .register-form-div-btn {
-        margin-top: 10px;
-        border: solid;
-        border-width: 1.5px;
-        font: normal normal 600 14px var(--text-font-primary);
+        font: normal normal 600 .8rem var(--text-font-primary);
         background-color: var(--text-color-primary-dark);
         color: #ffffff;
+        border-radius: 3rem;
+        padding: .3rem .7rem;
+        outline: none;
+        border: none;
     }
 
     .register-succ-btn {
-        font: normal normal 600 14px var(--text-font-primary);
+        font: normal normal 600 1rem var(--text-font-primary);
         background-color: var(--text-color-primary-dark);
         color: #ffffff;
+        border-radius: 3rem;
+        padding: .3rem 1rem;
+        outline: none;
+        border: none;
     }
 
     .register-succ-btn:hover,
     .register-succ-btn:active {
-        font: normal normal 600 14px var(--text-font-primary);
+        font: normal normal 600 1rem var(--text-font-primary);
         background-color: var(--text-color-primary-light);
         color: #000000;
     }
@@ -6046,36 +6025,45 @@ li a {
     }
 
     .register-close-img {
-        width: 1.5vw;
-        height: 3vh;
+        width: 3vw;
+        height: 2vh;
         padding-right: 1vw;
         padding-top: 1vh;
     }
 
+    .register-close-btn {
+        text-align: right;
+    }
+
     .register-succ-line-1 {
-        font: normal normal bold 4rem var(--text-font-secondary);
+        font: normal normal bold 3.5rem var(--text-font-secondary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
+        margin-top: -5vh;
     }
 
     .register-succ-line-2 {
-        font: normal normal bold 2rem var(--text-font-primary);
+        font: normal normal medium 1.5rem var(--text-font-primary);
+        margin: -1.5rem 2rem 0rem 2rem;
         letter-spacing: 0px;
         color: #000000;
     }
 
     .register-succ-line-3 {
-        font: normal normal bold 1rem var(--text-font-primary);
+        font: normal normal medium .7rem var(--text-font-primary);
         letter-spacing: 0px;
-        color: var(--text-color-primary-light);
+        color: var(--text-color-primary-dark);
     }
 
     .home {
-        background-color: var(--text-color-primary-light);
+        background: url(../images/home/home-bcg.jpg) no-repeat;
+        background-size: 100% 100%;
     }
 
+
+
     .home-container-div {
-        margin-top: 25vh;
+        margin-top: 35vh;
     }
 
     .home-div-text-1 {
@@ -6086,17 +6074,66 @@ li a {
     .home-div-text-2 {
         font: normal normal bold 5rem var(--text-font-secondary);
         color: #FFF7AB;
-        margin-top: -5vh;
+        margin-top: -6vh;
     }
+
+
 
     .home-btn {
+        letter-spacing: 0px;
+        color: #000000;
+        background-color: #FFF7AB;
+        opacity: 1;
         font: normal normal bold 1.2rem var(--text-font-primary);
         border-radius: 3rem;
-        padding: .4rem 1.3rem .4rem 1.3rem;
+        padding: .5rem 1.4rem .5rem 1.4rem;
+        position: relative;
+        border: none;
+        outline: none;
+        border-radius: 3rem;
+        z-index: 1;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 0.9;
     }
 
+    .home-btn::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--text-color-primary-light);
+        z-index: -1;
+        transition: transform 300ms;
+        transform: scaleX(1) skew(0deg);
+        border-radius: 3rem;
+    }
+
+    .home-btn:hover::before {
+        transform: scaleX(0) skew(90deg);
+    }
+
+    .home-div-btn {
+        margin-top: -8vh;
+    }
+
+
+    .about {
+
+        background: url(../images/about/about-bcg.png) no-repeat;
+        background-position: top;
+        background-size: cover;
+        position: static;
+        margin-top: -15vh;
+    }
+
+
     .about-div-1 {
-        padding-top: 10vh;
+        padding-top: 25vh;
+
+
     }
 
     .about-place {
@@ -6105,7 +6142,7 @@ li a {
 
     .about-div-1-main-text,
     .about-div-2-main-text {
-        font: normal normal bold 1.5rem var(--text-font-secondary);
+        font: normal normal bold 2rem var(--text-font-secondary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
@@ -6127,36 +6164,37 @@ li a {
     }
 
     .about-div-1-mid-img {
-        max-width: 20vw;
-        max-height: 20vh;
-        border-color: red;
+        max-width: 25vw;
+        max-height: 25vh;
+
 
     }
 
     .about-div-1-mid-text {
-        font: normal normal bold 0.8rem var(--text-font-primary);
+        font: normal normal bold .9rem var(--text-font-primary);
     }
 
     .about-div-1-last-text {
-        font: normal normal 600 1.3rem var(--text-font-primary);
+        font: normal normal 600 1.5rem var(--text-font-primary);
         color: #000000;
+
     }
 
-    .about-div-2 {
-        padding-top: 15vh;
-    }
+
+
+
 
     .about-div-2-1-mid-img,
     .about-div-2-2-mid-img,
     .about-div-2-3-mid-img {
-        max-width: 20vw;
-        max-height: auto;
+        max-width: 35vw;
+        max-height: 35vh;
     }
 
     .about-div-2-1-mid-text-1,
     .about-div-2-2-mid-text-1,
     .about-div-2-3-mid-text-1 {
-        font: normal normal bold 1.2rem var(--text-font-primary);
+        font: normal normal bold 2.1rem var(--text-font-primary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
@@ -6164,29 +6202,61 @@ li a {
     .about-div-2-1-mid-text-2,
     .about-div-2-2-mid-text-2,
     .about-div-2-3-mid-text-2 {
-        font: normal normal bold 0.7rem var(--text-font-primary);
+        font: normal normal bold 0.9rem var(--text-font-primary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
 
     #about-slider-div {
-        height: 60vh;
+        height: 100vh;
     }
 
+    .about-slide-div {
+        margin-top: 15vh;
+        width: 100vw;
+        height: 100vh;
+
+    }
+
+    .slide-div-bcg-div {
+        background: url(../images//about//about2-bcg.png) no-repeat;
+        background-position: bottom right;
+        background-size: 100% 120%;
+        width: 100vw;
+        height: 100vh;
+    }
 
     .dotBtn {
-        margin-left: 2vw;
-        margin-right: 2vw;
-        margin-top: 10vh;
+        margin: 0vh 2vw 5vh 2vw;
+        z-index: 4;
+        width: 16px;
+        height: 16px;
     }
 
+    .about-div-2 {
+        width: 100%;
+        position: relative;
+    }
+
+    .about-div-2-last-btn {
+        position: absolute;
+        bottom: 5vh;
+        left: 43vw;
+        z-index: 4;
+    }
+
+
+
+    .feature-div-btn {
+        padding-top: 18vh;
+    }
 
     .feature-slide-btn {
         letter-spacing: 0px;
-        font: normal normal bold .8rem var(--text-font-primary);
+        font: normal normal bold 1.2rem var(--text-font-primary);
         color: var(--text-color-primary-dark);
-        margin: 0rem .5rem 0rem .5rem;
-        padding: 0.3rem .5rem 0.3rem .5rem;
+        margin: 0rem 2rem 0rem 2rem;
+        padding: 0.3rem 1.5rem 0.3rem 1.5rem;
         background: transparent;
         border-radius: 3rem;
     }
@@ -6195,7 +6265,7 @@ li a {
     .feature-slide-btn:hover {
         opacity: 1;
         text-align: center;
-        font: normal normal bold .8rem var(--text-font-primary);
+        font: normal normal bold 1.2rem var(--text-font-primary);
         letter-spacing: 0px;
         color: #124F3F;
         outline: none;
@@ -6210,11 +6280,11 @@ li a {
 
     .feature-slide-div {
         position: absolute;
-        width: 100vw;
-        height: 70vh;
+        width: 100%;
+        height: 80vh;
         background-color: #FFFFFF;
         opacity: 1;
-        transition: transform 500ms ease-in;
+        transition: transform 500ms ease;
         animation-duration: 500ms;
     }
 
@@ -6222,35 +6292,37 @@ li a {
     .feature-div-2-container,
     .feature-div-3-container {
         display: grid;
-        grid-template-rows: 1fr 1fr;
-        justify-self: center;
-        align-self: center;
-        width: 100vw;
-        height: 50vh;
-        row-gap: 25vh;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        height: 60vh;
+        justify-items: center;
+        align-items: center;
+
     }
 
 
     .feature-div-1-img-container,
     .feature-div-2-img-container,
     .feature-div-3-img-container {
-        width: 30vw;
-        height: 20vh;
+        width: 35vw;
+        height: 35vh;
+        padding: auto;
+        margin: auto;
         opacity: 1;
-        justify-self: center;
-        align-self: center;
+
+
     }
 
     .feature-div-1-list-container,
     .feature-div-2-list-container,
     .feature-div-3-list-container {
-        justify-self: center;
-        width: 100vw;
-        height: 40vh;
+        width: 50vw;
+        height: 50vh;
+
         text-align: center;
-        font: normal normal bold .7rem var(--text-font-primary);
-        letter-spacing: 0px;
-        opacity: 1;
+        padding: 0rem 1rem;
+
+
 
     }
 
@@ -6258,17 +6330,18 @@ li a {
     .feature-div-2-list,
     .feature-div-3-list {
         text-align: center;
-        font: normal normal 600 1rem var(--text-font-primary);
+        font: normal normal 600 2vw/8vh var(--text-font-primary);
         letter-spacing: 0px;
-        padding: .6rem;
-        margin: .5rem;
-        height: 2vh;
+        border-radius: 3rem;
+        height: 8vh;
+        margin-top: -1vh;
     }
 
     .pricing-container-div {
         display: grid;
-        grid-template-rows: 1fr 1fr;
-        width: 100vw;
+        grid-template-columns: 1fr 1fr;
+        max-width: auto;
+        height: auto;
         justify-items: center;
         align-items: center;
         margin-top: 20vh;
@@ -6280,61 +6353,115 @@ li a {
         background-position: bottom;
     }
 
+    .pricing-div-1 {
+        width: 40vw;
+    }
 
     .pricing-div-img {
-        max-width: 70vw;
+        max-width: 60vw;
         max-height: 60vh;
     }
 
     .pricing-div-text-1 {
-        font: normal normal bold 2rem var(--text-font-secondary);
+        font: normal normal bold 3rem var(--text-font-secondary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
 
     .pricing-div-text-2 {
-        font: normal normal bold .8rem var(--text-font-primary);
+        font: normal normal bold 1rem var(--text-font-primary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
         padding: 0rem 3rem 0rem 3rem;
     }
 
+
+
     .pricing-btn {
-        font: normal normal 600 1.2rem var(--text-font-primary);
+        letter-spacing: 0px;
+        background-color: #84E4C9;
+        opacity: 1;
+        font: normal normal 600 1.5rem var(--text-font-primary);
+        border-radius: 3rem;
+        padding: 0.5rem 1.8rem 0.5rem 1.8rem;
+        position: relative;
+        border: none;
+        outline: none;
+        border-radius: 3rem;
+        z-index: 1;
+        letter-spacing: 0px;
+        opacity: 0.9;
+        color: #FFFFFF;
+    }
+
+    .pricing-btn::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         background-color: var(--text-color-primary-dark);
-        color: #ffffff;
+        ;
+        z-index: -1;
+        font: normal normal 600 1.5rem var(--text-font-primary);
+        background-color: var(--text-color-primary-dark);
+        border-radius: 3rem;
+        padding: 0.3rem 1.5rem 0.3rem 1.5rem;
+        transition: transform 300ms ease-in-out;
+        transform: scaleX(1) skew(0deg);
         border-radius: 3rem;
     }
 
-    .pricing-btn:hover,
-    .pricing-btn:active {
-        background-color: var(--text-color-primary-light);
-        color: var(--text-color-primary-dark);
+    .pricing-btn:hover::before,
+    .pricing-btn:active::before,
+    .pricing-btn:focus::before {
+        transform: scaleX(0) skew(90deg);
     }
 
+    .pricing-btn:hover,
+    .pricing-btn:active,
+    .pricing-btn:focus {
+        color: #000000;
+    }
+
+    .team {
+        background: url(../images/team/team-bcg.png) no-repeat;
+        background-position: center;
+        background-size: 110% 110%;
+    }
+
+    .team-container-div {
+        padding-top: 10vh;
+    }
 
     .team-div-text-1 {
-        font: normal normal bold 2rem var(--text-font-secondary);
+        font: normal normal bold 3rem var(--text-font-secondary);
         letter-spacing: 0px;
         color: var(--text-color-primary-dark);
     }
 
     .team-main {
         display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        max-width: auto;
+        height: auto;
         justify-items: center;
         align-items: center;
-        row-gap: 10vh;
-        margin-top: 3vh;
+        margin-top: 15vh;
+        column-gap: 0;
     }
 
     .team-main-1-text-1,
     .team-main-2-text-1,
     .team-main-3-text-1,
-    .team-main-4-text-1 {
+    .team-main-4-text-1,
+    .team-sec-1-text-1,
+    .team-sec-2-text-1,
+    .team-sec-3-text-1,
+    .team-sec-4-text-1 {
 
-        font: normal normal 600 .7rem var(--text-font-primary);
+        font: normal normal 600 1rem var(--text-font-primary);
         letter-spacing: 0px;
         color: #000000;
 
@@ -6345,18 +6472,21 @@ li a {
     .team-main-1-text-2,
     .team-main-2-text-2,
     .team-main-3-text-2,
-    .team-main-4-text-2 {
+    .team-main-4-text-2,
+    .team-sec-1-text-2,
+    .team-sec-2-text-2,
+    .team-sec-3-text-2 {
 
-        font: normal normal 600 .6rem var(--text-font-primary);
+        font: normal normal 600 0.7rem var(--text-font-primary);
         letter-spacing: 0px;
         color: #000000;
-        margin-top: -1vh;
+        margin-top: -1rem;
 
     }
 
     .team-div-img {
-        width: 7rem;
-        height: 7rem;
+        width: 8rem;
+        height: 8rem;
         border-radius: 50%;
         border: none;
         box-shadow: 0 0 .7rem .4rem #888888;
@@ -6364,56 +6494,139 @@ li a {
 
 
     .footer {
+        background: url(../images/connect/items-bcg.png) no-repeat bottom, url(../images/connect/connect-bcg.png) no-repeat center;
+        background-size: 110% 30%, 110% 110%;
         display: grid;
-        grid-template-rows: 1fr .1fr;
-        align-items: flex-end;
+        grid-template-rows: 2fr .1fr;
+        justify-items: center;
 
     }
 
 
     .footer-div-img {
-        display: none;
+        max-width: 45vw;
+        max-height: 45vh;
     }
 
     .footer-mid {
+        width: 100vw;
         display: grid;
-        grid-template-rows: 1fr .1fr;
-        align-self: center;
-        justify-items: center;
-        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        max-width: auto;
+        height: auto;
 
+
+        align-items: center;
+        justify-items: center;
+    }
+
+    .contact-div-form {
+        background-color: transparent;
+        text-align: start;
+        justify-self: start;
+        padding-left: 5vw;
+
+    }
+
+    .contact-form-line-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+
+    #contactFormMessage {
+        width: 99%;
+        border-radius: .8rem;
+        outline: none;
+        padding: .5rem;
+        margin-top: -.5rem;
+        border: solid;
+        border-width: 1px;
+    }
+
+    #email {
+        width: 99%;
+        border-radius: 3rem;
+        outline: none;
+        padding: .5rem;
+        border: solid;
+        border-width: 1px;
+    }
+
+    #name {
+        width: 99%;
+        border-radius: 3rem;
+        outline: none;
+        padding: .5rem;
+        border: solid;
+        border-width: 1px;
+    }
+
+    .contact-form-heading-1 {
+        font: normal normal bold 2rem var(--text-font-secondary);
+        color: var(--text-color-primary-dark);
+    }
+
+    .contact-form-heading-2 {
+        font: normal normal normal 1rem var(--text-font-primary);
+        color: var(--text-color-primary-dark);
+        margin-top: -1.5rem;
+    }
+
+    .form-label,
+    .form-label-message {
+        font: normal normal normal .8rem var(--text-font-primary);
+        color: var(--text-color-primary-dark);
+    }
+
+    .contact-form-div-btn {
+        padding: .3rem 1.2rem;
+        border-radius: 3rem;
+        font: normal normal normal .8rem var(--text-font-primary);
+        background-color: transparent;
+        border-width: 1px;
+        margin-top: .5rem;
+        border: solid;
+    }
+
+    .footer-items-div {
+        width: 100vw;
     }
 
     .footer-item-4-social {
         background-color: transparent;
         border: none;
-        max-width: 4vw;
-        max-height: 4vh;
-        padding: 0rem 0.5rem 0rem 0.5rem;
+        max-width: 3vw;
+        max-height: 3vh;
+        padding-right: 1vw;
     }
 
     .copyright {
         font: normal normal bold 0.6rem var(--text-font-primary);
         letter-spacing: 0px;
         color: white;
-        background-color: var(--text-color-primary-dark);
-        padding: 0.5rem 0rem 0.5rem 0rem;
+        margin-top: auto;
+        margin-top: 5vh;
     }
 
     .footer-item-2-text-1 {
-        font: normal normal bold 0.8rem var(--text-font-primary);
+        font: normal normal bold 1rem var(--text-font-primary);
     }
 
     .footer-item-2-text-2 {
-        font: normal normal bold 0.6rem var(--text-font-primary);
+        font: normal normal bold 0.9rem var(--text-font-primary);
     }
 
     .footer-items {
         letter-spacing: 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
         color: white;
-        text-align: center;
-        display: block;
-        background-color: var(--text-color-primary-dark);
+        text-align: start;
+        align-items: flex-end;
+        align-self: flex-end;
     }
+
 
 }
