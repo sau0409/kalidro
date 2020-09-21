@@ -5746,6 +5746,7 @@ li a {
 
     :root {
         font-size: 2vh;
+        overflow-x: scroll;
     }
 
 
@@ -5758,6 +5759,7 @@ li a {
         height: auto;
         align-items: center;
         justify-items: center;
+        opacity: 1;
     }
 
 
@@ -5772,16 +5774,20 @@ li a {
 
 
     .cls-2 {
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-family: ACaslonPro-Bold, Adobe Caslon Pro;
         font-weight: 700;
     }
 
     .cls-12 {
-        font-size: 1rem;
+        font-size: 1.7rem;
         font-family: Gelion-Medium, Gelion;
         font-weight: 500;
         letter-spacing: 0.15em;
+    }
+
+    .header-logo {
+      margin-left: 13vw;
     }
 
 
@@ -5931,7 +5937,7 @@ li a {
         }
     }
 
-    
+
 
 
     .register-succ {
@@ -6056,8 +6062,8 @@ li a {
     }
 
     .home {
-        background: url(../images/home/home-bcg.jpg) no-repeat;
-        background-size: 100% 100%;
+        background: url("");
+        background-color: var(--text-color-primary-light);
     }
 
 
@@ -6084,7 +6090,7 @@ li a {
         color: #000000;
         background-color: #FFF7AB;
         opacity: 1;
-        font: normal normal bold 1.2rem var(--text-font-primary);
+        font: normal normal bold 2rem var(--text-font-primary);
         border-radius: 3rem;
         padding: .5rem 1.4rem .5rem 1.4rem;
         position: relative;
@@ -6093,7 +6099,7 @@ li a {
         border-radius: 3rem;
         z-index: 1;
         letter-spacing: 0px;
-        color: #000000;
+        color: #ffffff;
         opacity: 0.9;
     }
 
@@ -6104,7 +6110,7 @@ li a {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: var(--text-color-primary-light);
+        background-color: var(--text-color-primary-dark);
         z-index: -1;
         transition: transform 300ms;
         transform: scaleX(1) skew(0deg);
@@ -6122,18 +6128,13 @@ li a {
 
     .about {
 
-        background: url(../images/about/about-bcg.png) no-repeat;
-        background-position: top;
-        background-size: cover;
-        position: static;
-        margin-top: -15vh;
+        background: url("");
     }
 
 
     .about-div-1 {
-        padding-top: 25vh;
-
-
+        padding-top: 10vh;
+        height: 100vh;
     }
 
     .about-place {
@@ -6209,54 +6210,64 @@ li a {
 
     #about-slider-div {
         height: 100vh;
+        background-color: var(--text-color-primary-light);
     }
 
     .about-slide-div {
-        margin-top: 15vh;
+        margin-top: 10vh;
         width: 100vw;
         height: 100vh;
+        background-color: var(--text-color-primary-light);
 
     }
 
     .slide-div-bcg-div {
-        background: url(../images//about//about2-bcg.png) no-repeat;
-        background-position: bottom right;
-        background-size: 100% 120%;
-        width: 100vw;
-        height: 100vh;
+        background: url("");
     }
 
     .dotBtn {
-        margin: 0vh 2vw 5vh 2vw;
         z-index: 4;
         width: 16px;
         height: 16px;
     }
 
+    .dotBtn:hover {
+        background-color: #ffffff;
+    }
+    
+    .about-slide-btn-active {
+        transform: scale(1.2, 1.2);
+        background-color: #ffffff;
+    }
+
     .about-div-2 {
         width: 100%;
         position: relative;
+        background-color: var(--text-color-primary-light);
     }
 
     .about-div-2-last-btn {
         position: absolute;
-        bottom: 5vh;
-        left: 43vw;
+        bottom: 1vh;
+        left: 35vw;
         z-index: 4;
     }
 
 
+    .feature {
+        text-align: center;
+    }
 
     .feature-div-btn {
-        padding-top: 18vh;
+        padding-top: 10vh;
     }
 
     .feature-slide-btn {
         letter-spacing: 0px;
-        font: normal normal bold 1.2rem var(--text-font-primary);
+        font: normal normal bold 1rem var(--text-font-primary);
         color: var(--text-color-primary-dark);
-        margin: 0rem 2rem 0rem 2rem;
-        padding: 0.3rem 1.5rem 0.3rem 1.5rem;
+        margin: 0rem .8rem 0rem .8rem;
+        padding: 0.3rem .5rem 0.3rem .5rem;
         background: transparent;
         border-radius: 3rem;
     }
@@ -6265,7 +6276,7 @@ li a {
     .feature-slide-btn:hover {
         opacity: 1;
         text-align: center;
-        font: normal normal bold 1.2rem var(--text-font-primary);
+        font: normal normal bold 1rem var(--text-font-primary);
         letter-spacing: 0px;
         color: #124F3F;
         outline: none;
@@ -6274,14 +6285,17 @@ li a {
 
     #feature-slider-div {
         position: relative;
-        height: 80vh;
+        height: 90vh;
         overflow: hidden;
+        text-align: center;
+        width: 100%;
+        display: block;
     }
 
     .feature-slide-div {
         position: absolute;
         width: 100%;
-        height: 80vh;
+        height: 100%;
         background-color: #FFFFFF;
         opacity: 1;
         transition: transform 500ms ease;
@@ -6291,13 +6305,11 @@ li a {
     .feature-div-1-container,
     .feature-div-2-container,
     .feature-div-3-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         width: 100%;
-        height: 60vh;
-        justify-items: center;
-        align-items: center;
-
+        height: auto;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
 
@@ -6305,61 +6317,52 @@ li a {
     .feature-div-2-img-container,
     .feature-div-3-img-container {
         width: 35vw;
-        height: 35vh;
-        padding: auto;
-        margin: auto;
+        height: auto;
+        padding: 1rem;
+        margin: 1rem;
         opacity: 1;
-
 
     }
 
     .feature-div-1-list-container,
     .feature-div-2-list-container,
     .feature-div-3-list-container {
-        width: 50vw;
+        width: 80%;
         height: 50vh;
-
         text-align: center;
-        padding: 0rem 1rem;
-
-
-
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .feature-div-1-list,
     .feature-div-2-list,
     .feature-div-3-list {
         text-align: center;
-        font: normal normal 600 2vw/8vh var(--text-font-primary);
+        font: normal normal 600 3vw/4vh var(--text-font-primary);
         letter-spacing: 0px;
         border-radius: 3rem;
-        height: 8vh;
+        height: 4vh;
         margin-top: -1vh;
     }
 
     .pricing-container-div {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        max-width: auto;
-        height: auto;
-        justify-items: center;
-        align-items: center;
+        display: block;
+        width: 100vw;
         margin-top: 20vh;
     }
 
     .pricing {
-        background: url(../images/pricing/pricing-bcg.png) no-repeat;
-        background-size: cover;
-        background-position: bottom;
+        background: url("");
+        text-align: center;
+        background-color: var(--text-color-primary-light);
     }
 
     .pricing-div-1 {
-        width: 40vw;
+        width: 100vw;
     }
 
-    .pricing-div-img {
-        max-width: 60vw;
-        max-height: 60vh;
+    .pricing-div-2 {
+        display: none;
     }
 
     .pricing-div-text-1 {
@@ -6426,13 +6429,15 @@ li a {
     }
 
     .team {
-        background: url(../images/team/team-bcg.png) no-repeat;
-        background-position: center;
-        background-size: 110% 110%;
+        background: url("");
+    }
+
+    .team-img {
+        margin-top: -5vh;
     }
 
     .team-container-div {
-        padding-top: 10vh;
+        padding-top: 5vh;
     }
 
     .team-div-text-1 {
@@ -6443,28 +6448,28 @@ li a {
 
     .team-main {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        max-width: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         height: auto;
-        justify-items: center;
-        align-items: center;
-        margin-top: 15vh;
-        column-gap: 0;
     }
 
     .team-main-1-text-1,
     .team-main-2-text-1,
     .team-main-3-text-1,
-    .team-main-4-text-1,
-    .team-sec-1-text-1,
-    .team-sec-2-text-1,
-    .team-sec-3-text-1,
-    .team-sec-4-text-1 {
+    .team-main-4-text-1 {
 
         font: normal normal 600 1rem var(--text-font-primary);
         letter-spacing: 0px;
         color: #000000;
+        margin-top: -2vh;
 
+    }
+
+    .team-main-1-img,
+    .team-main-2-img,
+    .team-main-3-img,
+    .team-main-4-img {
+        margin-bottom: 5vh;
     }
 
 
@@ -6480,7 +6485,7 @@ li a {
         font: normal normal 600 0.7rem var(--text-font-primary);
         letter-spacing: 0px;
         color: #000000;
-        margin-top: -1rem;
+        margin-top: -2vh;
 
     }
 
@@ -6494,38 +6499,32 @@ li a {
 
 
     .footer {
-        background: url(../images/connect/items-bcg.png) no-repeat bottom, url(../images/connect/connect-bcg.png) no-repeat center;
-        background-size: 110% 30%, 110% 110%;
+        background: url("");
         display: grid;
         grid-template-rows: 2fr .1fr;
         justify-items: center;
+        margin-top: 50vh;
 
     }
 
 
     .footer-div-img {
-        max-width: 45vw;
-        max-height: 45vh;
+        display: none;
     }
 
     .footer-mid {
-        width: 100vw;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        max-width: auto;
+        width: 100%;
         height: auto;
-
-
-        align-items: center;
-        justify-items: center;
+        display: block;
     }
 
     .contact-div-form {
         background-color: transparent;
         text-align: start;
         justify-self: start;
-        padding-left: 5vw;
-
+        padding: 2vw;
+        width: 80%;
+        margin-bottom: 10vh;
     }
 
     .contact-form-line-1 {
@@ -6591,6 +6590,7 @@ li a {
 
     .footer-items-div {
         width: 100vw;
+        background-color: var(--text-color-primary-dark);
     }
 
     .footer-item-4-social {
@@ -6598,6 +6598,7 @@ li a {
         border: none;
         max-width: 3vw;
         max-height: 3vh;
+        padding-left: 1vw;
         padding-right: 1vw;
     }
 
@@ -6615,17 +6616,14 @@ li a {
 
     .footer-item-2-text-2 {
         font: normal normal bold 0.9rem var(--text-font-primary);
+        margin-bottom: 5vh;
     }
 
     .footer-items {
         letter-spacing: 0px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        justify-items: center;
         color: white;
-        text-align: start;
-        align-items: flex-end;
-        align-self: flex-end;
+        text-align: center;
+        display: block;
     }
 
 
