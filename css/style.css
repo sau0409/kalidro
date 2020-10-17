@@ -15,6 +15,7 @@ body {
 .btn {
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 
@@ -1221,7 +1222,7 @@ li a {
 @media (max-width: 1320px) {
 
     :root {
-        font-size: .9vw;
+        font-size: 1vw;
     }
 
     .header {
@@ -3051,7 +3052,7 @@ li a {
 @media (max-width: 1920px) {
 
     :root {
-        font-size: 1vw;
+        font-size: 1.1vw;
     }
 
     .header {
@@ -3959,7 +3960,7 @@ li a {
 @media (max-width: 2220px) {
 
     :root {
-        font-size: 1.1vw;
+        font-size: 1.2vw;
     }
 
     .header {
