@@ -38,9 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         console.log(err);
                     } else {
                         document.getElementById("contactBtn").innerText = "Message delivered.";
-                        document.getElementById("name").innerText = "";
-                        document.getElementById("email").innerText = "";
-                        document.getElementById("contactFormMessage").innerText = "";
+                        setTimeout(() => {
+                            console.log('start');
+                            location.reload();
+                        }, 2000);
                     }
                 });
                 console.log("syncRes");
@@ -62,20 +63,133 @@ document.addEventListener("DOMContentLoaded", () => {
         let email = document.getElementById("email").value;
         let message = document.getElementById("contactFormMessage").value;
 
-        document.getElementById("contactBtn").innerText = "sending..";
-        document.getElementById("contactBtn").setAttribute("style", `
-        background-color: #124F3F;
-        color: white;
-        `)
-        if (name != "" && email != "" && message != "") {
-            syncContactForm(name, email, message);
-        } else {
-            document.getElementById("contactBtn").innerText = "Fileds can not be null!";
-        }
+        let validateContactStatus = validateContact(name, email);
+        console.log(validateContactStatus);
+        console.log('validation contact form');
+        if (validateContactStatus) {
 
+            document.getElementById("contactBtn").innerText = "sending..";
+            document.getElementById("contactBtn").setAttribute("style", `
+            background-color: #124F3F;
+            color: white;
+            `)
+
+            syncContactForm(name, email, message);
+        }
 
     });
 
+
+    //validating contact inputs
+
+    function validateContact(name, email) {
+        let validateNameStatus = validateName(name);
+        let validateEmailStatus = validateEmail(email);
+        console.log(validateNameStatus);
+        console.log(validateEmailStatus);
+        if (typeof validateNameStatus === 'string' && typeof validateEmailStatus === 'string') {
+
+            document.getElementById("contactName").innerText = '*' + validateNameStatus;
+            document.getElementById("contactEmail").innerText = '*' + validateEmailStatus;
+            return false
+        } else if (typeof validateNameStatus === 'string') {
+            document.getElementById("contactName").innerText = '*' + validateNameStatus;
+            document.getElementById("contactEmail").innerText = '';
+            return false
+        } else if (typeof validateEmailStatus === 'string') {
+            document.getElementById("contactName").innerText = '';
+            document.getElementById("contactEmail").innerText = '*' + validateEmailStatus;
+            return false
+        } else {
+            document.getElementById("contactName").innerText = '';
+            document.getElementById("contactEmail").innerText = '';
+            return true
+        }
+
+    }
+
+    //validation register inputs
+
+    function validateRegitration(name, email, role) {
+        let validateNameStatus = validateName(name);
+        let validateEmailStatus = validateEmail(email);
+        let validateRoleStatus = validateRole(role);
+        console.log(validateNameStatus);
+        console.log(validateEmailStatus);
+        console.log(validateRoleStatus);
+        if (typeof validateNameStatus === 'string' && typeof validateEmailStatus === 'string' && typeof validateRoleStatus === 'string') {
+
+            document.getElementById("registerErName").innerText = '*' + validateNameStatus;
+            document.getElementById("registerErEmail").innerText = '*' + validateEmailStatus;
+            document.getElementById("registerErRole").innerText = '*' + validateRoleStatus;
+            return false
+        } else if (typeof validateNameStatus === 'string' && typeof validateEmailStatus === 'string') {
+            document.getElementById("registerErName").innerText = '*' + validateNameStatus;
+            document.getElementById("registerErEmail").innerText = '*' + validateEmailStatus;
+            document.getElementById("registerErRole").innerText = '';
+            return false
+        } else if (typeof validateNameStatus === 'string') {
+            document.getElementById("registerErName").innerText = '*' + validateNameStatus;
+            document.getElementById("registerErEmail").innerText = '';
+            document.getElementById("registerErRole").innerText = '';
+            return false
+        } else if (typeof validateEmailStatus === 'string') {
+            document.getElementById("registerErName").innerText = '';
+            document.getElementById("registerErEmail").innerText = '*' + validateEmailStatus;
+            document.getElementById("registerErRole").innerText = '';
+            return false
+        } else if (typeof validateRoleStatus === 'string') {
+            document.getElementById("registerErName").innerText = '';
+            document.getElementById("registerErEmail").innerText = '';
+            document.getElementById("registerErRole").innerText = '*' + validateRoleStatus;
+            return false
+        } else {
+            document.getElementById("registerErName").innerText = '';
+            document.getElementById("registerErEmail").innerText = '';
+            document.getElementById("registerErRole").innerText = '';
+            return true
+        }
+    }
+
+    //validate name
+
+    function validateName(name) {
+        if (name === null || name === undefined || name === '') {
+            return "name can not be null"
+        } else if (name.length > 30) {
+            return "name length limit exceeding"
+        } else if (!/^[A-Za-z ]+$/.test(name)) {
+            return "name can only take letters"
+        } else {
+            return true
+        }
+
+    }
+
+    //validate email
+
+    function validateEmail(email) {
+        if (email === null || email === undefined || email === '') {
+            return "email can not be null"
+        } else if (email.length > 50) {
+            return "email length limit exceeding"
+        } else if (!/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/.test(email)) {
+            return "email not valid"
+        } else {
+            return true
+        }
+    }
+
+    //validate role
+
+    function validateRole(role) {
+        if (role === null || role === undefined || role === '') {
+            return "role can not be null"
+        } else {
+            return true
+        }
+
+    }
 
 
     //add listner on register button
@@ -106,6 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (navigator.onLine) {
             try {
+
                 //connect firebase
                 let registerForm = await firebase.database().ref("register-form").push();
                 //let newContactForm = await contactForm.push();
@@ -119,13 +234,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         console.log(err);
                     } else {
                         document.getElementById("registerBtn").innerText = "Registered Successfully!";
-                        document.getElementById("registerName").innerText = "";
-                        document.getElementById("registerEmail").innerText = "";
-                        document.getElementById("registerEmail").innerText = "";
-                        document.getElementById("registerName").innerText = "";
                         document.getElementById("registerform").style.display = "none";
                         document.getElementById("registerSucc").style.display = "block";
-
+                        setTimeout(() => {
+                            console.log('start');
+                            location.reload();
+                        }, 3000);
                     }
                 });
             } catch (err) {
@@ -151,18 +265,19 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (document.getElementById("Institute").checked) {
             role = "Institute";
         } else {
-            role = "null"
+            role = null
         }
+        let validateStatus = validateRegitration(name, email, role);
+        console.log(validateStatus);
+        console.log('validation register form');
+        if (validateStatus) {
+            document.getElementById("registerBtn").innerText = "processing..";
+            document.getElementById("registerBtn").setAttribute("style", `
+            background-color: #124F3F;
+            color: white;
+            `)
 
-        document.getElementById("registerBtn").innerText = "processing..";
-        document.getElementById("registerBtn").setAttribute("style", `
-        background-color: #124F3F;
-        color: white;
-        `)
-        if (name != "" && email != "" && role != "") {
             registerUser(name, email, role);
-        } else {
-            document.getElementById("registerBtn").innerText = "Fileds can not be null!";
         }
 
 
@@ -341,13 +456,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     var isInViewport = function (elem) {
-        console.log("in scroll");
+
         var bounding = elem.getBoundingClientRect();
-        console.log(bounding.bottom - 10);
-        console.log(window.innerHeight);
-        console.log(window.innerWidth);
-        console.log(document.documentElement.clientHeight);
-        console.log(document.documentElement.clientWidth);
         return (
             bounding.top >= 0 &&
             bounding.left >= 0 &&
@@ -361,7 +471,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function windowScrollListner() {
         window.addEventListener("scroll", function () {
             if (isInViewport(instituteDiv) && scrollEvevnt == 0) {
-                console.log("scroll read");
                 myFeatureList1Move();
                 scrollEvevnt = 1;
             }
@@ -377,73 +486,73 @@ document.addEventListener("DOMContentLoaded", () => {
     let autolist1Count = 0;
 
     function myFeatureList1Move() {
-        
-        if(autolist1Count == 0) {
 
-        setTimeout(() => {
-            document.getElementById('feature-div-1-list-1').innerText = " ";
-            document.getElementById('feature-div-1-list-2').innerText = " ";
-            document.getElementById('feature-div-1-list-3').innerText = instituetListArr[0];
-            document.getElementById('feature-div-1-list-4').innerText = instituetListArr[1];
-            document.getElementById('feature-div-1-list-5').innerText = instituetListArr[2];
+        if (autolist1Count == 0) {
 
-            let newImg = document.createElement("img");
-            document.getElementById("feature-div-1-img").appendChild(newImg);
-            newImg.classList.add("feature-div-1-img-1", "feature-div-1", "featImgOut2");
-            newImg.setAttribute("id", "institute-img");
-            document.getElementById("institute-img").src = instituteImgArr[0];
+            setTimeout(() => {
+                document.getElementById('feature-div-1-list-1').innerText = " ";
+                document.getElementById('feature-div-1-list-2').innerText = " ";
+                document.getElementById('feature-div-1-list-3').innerText = instituetListArr[0];
+                document.getElementById('feature-div-1-list-4').innerText = instituetListArr[1];
+                document.getElementById('feature-div-1-list-5').innerText = instituetListArr[2];
 
-        }, 100);
+                let newImg = document.createElement("img");
+                document.getElementById("feature-div-1-img").appendChild(newImg);
+                newImg.classList.add("feature-div-1-img-1", "feature-div-1", "featImgOut2");
+                newImg.setAttribute("id", "institute-img");
+                document.getElementById("institute-img").src = instituteImgArr[0];
 
-        setTimeout(() => {
-            document.getElementById('feature-div-1-list-1').innerText = " ";
-            document.getElementById('feature-div-1-list-2').innerText = instituetListArr[0];
-            document.getElementById('feature-div-1-list-3').innerText = instituetListArr[1];
-            document.getElementById('feature-div-1-list-4').innerText = instituetListArr[2];
-            document.getElementById('feature-div-1-list-5').innerText = instituetListArr[3];
-            document.getElementById("institute-img").src = instituteImgArr[1];
-        }, 2000);
+            }, 100);
 
-        setTimeout(() => {
-            document.getElementById('feature-div-1-list-1').innerText = instituetListArr[0];
-            document.getElementById('feature-div-1-list-2').innerText = instituetListArr[1];
-            document.getElementById('feature-div-1-list-3').innerText = instituetListArr[2];
-            document.getElementById('feature-div-1-list-4').innerText = instituetListArr[3];
-            document.getElementById('feature-div-1-list-5').innerText = instituetListArr[4];
-            document.getElementById("institute-img").src = instituteImgArr[2];
-        }, 4000);
+            setTimeout(() => {
+                document.getElementById('feature-div-1-list-1').innerText = " ";
+                document.getElementById('feature-div-1-list-2').innerText = instituetListArr[0];
+                document.getElementById('feature-div-1-list-3').innerText = instituetListArr[1];
+                document.getElementById('feature-div-1-list-4').innerText = instituetListArr[2];
+                document.getElementById('feature-div-1-list-5').innerText = instituetListArr[3];
+                document.getElementById("institute-img").src = instituteImgArr[1];
+            }, 2500);
 
-        setTimeout(() => {
-            document.getElementById('feature-div-1-list-1').innerText = instituetListArr[1];
-            document.getElementById('feature-div-1-list-2').innerText = instituetListArr[2];
-            document.getElementById('feature-div-1-list-3').innerText = instituetListArr[3];
-            document.getElementById('feature-div-1-list-4').innerText = instituetListArr[4];
-            document.getElementById('feature-div-1-list-5').innerText = " ";
-            document.getElementById("institute-img").src = instituteImgArr[3];
-        }, 6000);
+            setTimeout(() => {
+                document.getElementById('feature-div-1-list-1').innerText = instituetListArr[0];
+                document.getElementById('feature-div-1-list-2').innerText = instituetListArr[1];
+                document.getElementById('feature-div-1-list-3').innerText = instituetListArr[2];
+                document.getElementById('feature-div-1-list-4').innerText = instituetListArr[3];
+                document.getElementById('feature-div-1-list-5').innerText = instituetListArr[4];
+                document.getElementById("institute-img").src = instituteImgArr[2];
+            }, 5000);
 
-        setTimeout(() => {
-            document.getElementById('feature-div-1-list-1').innerText = instituetListArr[2];
-            document.getElementById('feature-div-1-list-2').innerText = instituetListArr[3];
-            document.getElementById('feature-div-1-list-3').innerText = instituetListArr[4];
-            document.getElementById('feature-div-1-list-4').innerText = " ";
-            document.getElementById('feature-div-1-list-5').innerText = " ";
-            document.getElementById("institute-img").src = instituteImgArr[4];
-        }, 8000);
+            setTimeout(() => {
+                document.getElementById('feature-div-1-list-1').innerText = instituetListArr[1];
+                document.getElementById('feature-div-1-list-2').innerText = instituetListArr[2];
+                document.getElementById('feature-div-1-list-3').innerText = instituetListArr[3];
+                document.getElementById('feature-div-1-list-4').innerText = instituetListArr[4];
+                document.getElementById('feature-div-1-list-5').innerText = " ";
+                document.getElementById("institute-img").src = instituteImgArr[3];
+            }, 7500);
 
-        setTimeout(() => {
-            document.getElementById('feature-div-1-list-1').innerText = instituetListArr[0];
-            document.getElementById('feature-div-1-list-2').innerText = instituetListArr[1];
-            document.getElementById('feature-div-1-list-3').innerText = instituetListArr[2];
-            document.getElementById('feature-div-1-list-4').innerText = instituetListArr[3];
-            document.getElementById('feature-div-1-list-5').innerText = instituetListArr[4];
-            document.getElementById("institute-img").src = instituteImgArr[2];
-            list1CLickable = true;
-        }, 10000);
+            setTimeout(() => {
+                document.getElementById('feature-div-1-list-1').innerText = instituetListArr[2];
+                document.getElementById('feature-div-1-list-2').innerText = instituetListArr[3];
+                document.getElementById('feature-div-1-list-3').innerText = instituetListArr[4];
+                document.getElementById('feature-div-1-list-4').innerText = " ";
+                document.getElementById('feature-div-1-list-5').innerText = " ";
+                document.getElementById("institute-img").src = instituteImgArr[4];
+            }, 10000);
 
-        autolist1Count = 1;
+            setTimeout(() => {
+                document.getElementById('feature-div-1-list-1').innerText = instituetListArr[0];
+                document.getElementById('feature-div-1-list-2').innerText = instituetListArr[1];
+                document.getElementById('feature-div-1-list-3').innerText = instituetListArr[2];
+                document.getElementById('feature-div-1-list-4').innerText = instituetListArr[3];
+                document.getElementById('feature-div-1-list-5').innerText = instituetListArr[4];
+                document.getElementById("institute-img").src = instituteImgArr[2];
+                list1CLickable = true;
+            }, 12500);
 
-    }
+            autolist1Count = 1;
+
+        }
 
     }
 
@@ -455,32 +564,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
         el.addEventListener("click", () => {
 
-            if(list1CLickable) {
+            if (list1CLickable) {
 
-            featDivList.forEach(ele => {
-                ele.setAttribute("style", `
+                featDivList.forEach(ele => {
+                    ele.setAttribute("style", `
                 opacity: 0.4;
         color: #124F3F;
         background-color: transparent;
                 `)
-            });
-            el.setAttribute("style", `
+                });
+                el.setAttribute("style", `
             opacity: 1;
             background-color: #BEE8DC;
     border-radius: 3rem;
     color: #124F3F;
             `);
-            document.getElementById("institute-img").remove();
-            let newImg = document.createElement("img");
-            document.getElementById("feature-div-1-img").appendChild(newImg);
-            newImg.classList.add("feature-div-1-img-1", "feat-div-1");
-            newImg.setAttribute("id", "institute-img");
-            elText = el.textContent;
-            let imInd = instituetListArr.indexOf(elText);
-            document.getElementById("institute-img").src = instituteImgArr[imInd];
+                document.getElementById("institute-img").remove();
+                let newImg = document.createElement("img");
+                document.getElementById("feature-div-1-img").appendChild(newImg);
+                newImg.classList.add("feature-div-1-img-1", "feat-div-1");
+                newImg.setAttribute("id", "institute-img");
+                elText = el.textContent;
+                let imInd = instituetListArr.indexOf(elText);
+                document.getElementById("institute-img").src = instituteImgArr[imInd];
 
 
-        }
+            }
         });
 
     });
@@ -492,73 +601,73 @@ document.addEventListener("DOMContentLoaded", () => {
     let autolist2Count = 0;
 
     function myFeatureList2Move() {
-        if(autolist2Count === 0) {
+        if (autolist2Count === 0) {
 
-        setTimeout(() => {
-            console.log("slide1");
-            document.getElementById('feature-div-2-list-1').innerText = " ";
-            document.getElementById('feature-div-2-list-2').innerText = " ";
-            document.getElementById('feature-div-2-list-3').innerText = educatorListArr[0];
-            document.getElementById('feature-div-2-list-4').innerText = educatorListArr[1];
-            document.getElementById('feature-div-2-list-5').innerText = educatorListArr[2];
+            setTimeout(() => {
+                console.log("slide1");
+                document.getElementById('feature-div-2-list-1').innerText = " ";
+                document.getElementById('feature-div-2-list-2').innerText = " ";
+                document.getElementById('feature-div-2-list-3').innerText = educatorListArr[0];
+                document.getElementById('feature-div-2-list-4').innerText = educatorListArr[1];
+                document.getElementById('feature-div-2-list-5').innerText = educatorListArr[2];
 
-            let newImg = document.createElement("img");
-            document.getElementById("feature-div-2-img").appendChild(newImg);
-            newImg.classList.add("feature-div-2-img-1", "feature-div-1", "featImgOut2");
-            newImg.setAttribute("id", "educator-img");
-            document.getElementById("educator-img").src = educatorImgArr[0];
+                let newImg = document.createElement("img");
+                document.getElementById("feature-div-2-img").appendChild(newImg);
+                newImg.classList.add("feature-div-2-img-1", "feature-div-1", "featImgOut2");
+                newImg.setAttribute("id", "educator-img");
+                document.getElementById("educator-img").src = educatorImgArr[0];
 
-        }, 100);
+            }, 100);
 
-        setTimeout(() => {
-            console.log("slide2");
-            document.getElementById('feature-div-2-list-1').innerText = " ";
-            document.getElementById('feature-div-2-list-2').innerText = educatorListArr[0];
-            document.getElementById('feature-div-2-list-3').innerText = educatorListArr[1];
-            document.getElementById('feature-div-2-list-4').innerText = educatorListArr[2];
-            document.getElementById('feature-div-2-list-5').innerText = educatorListArr[3];
-            document.getElementById("educator-img").src = educatorImgArr[1];
-        }, 2000);
+            setTimeout(() => {
+                console.log("slide2");
+                document.getElementById('feature-div-2-list-1').innerText = " ";
+                document.getElementById('feature-div-2-list-2').innerText = educatorListArr[0];
+                document.getElementById('feature-div-2-list-3').innerText = educatorListArr[1];
+                document.getElementById('feature-div-2-list-4').innerText = educatorListArr[2];
+                document.getElementById('feature-div-2-list-5').innerText = educatorListArr[3];
+                document.getElementById("educator-img").src = educatorImgArr[1];
+            }, 2500);
 
-        setTimeout(() => {
-            document.getElementById('feature-div-2-list-1').innerText = educatorListArr[0];
-            document.getElementById('feature-div-2-list-2').innerText = educatorListArr[1];
-            document.getElementById('feature-div-2-list-3').innerText = educatorListArr[2];
-            document.getElementById('feature-div-2-list-4').innerText = educatorListArr[3];
-            document.getElementById('feature-div-2-list-5').innerText = educatorListArr[4];
-            document.getElementById("educator-img").src = educatorImgArr[2];
-        }, 4000);
+            setTimeout(() => {
+                document.getElementById('feature-div-2-list-1').innerText = educatorListArr[0];
+                document.getElementById('feature-div-2-list-2').innerText = educatorListArr[1];
+                document.getElementById('feature-div-2-list-3').innerText = educatorListArr[2];
+                document.getElementById('feature-div-2-list-4').innerText = educatorListArr[3];
+                document.getElementById('feature-div-2-list-5').innerText = educatorListArr[4];
+                document.getElementById("educator-img").src = educatorImgArr[2];
+            }, 5000);
 
-        setTimeout(() => {
-            document.getElementById('feature-div-2-list-1').innerText = educatorListArr[1];
-            document.getElementById('feature-div-2-list-2').innerText = educatorListArr[2];
-            document.getElementById('feature-div-2-list-3').innerText = educatorListArr[3];
-            document.getElementById('feature-div-2-list-4').innerText = educatorListArr[4];
-            document.getElementById('feature-div-2-list-5').innerText = " ";
-            document.getElementById("educator-img").src = educatorImgArr[3];
-        }, 6000);
+            setTimeout(() => {
+                document.getElementById('feature-div-2-list-1').innerText = educatorListArr[1];
+                document.getElementById('feature-div-2-list-2').innerText = educatorListArr[2];
+                document.getElementById('feature-div-2-list-3').innerText = educatorListArr[3];
+                document.getElementById('feature-div-2-list-4').innerText = educatorListArr[4];
+                document.getElementById('feature-div-2-list-5').innerText = " ";
+                document.getElementById("educator-img").src = educatorImgArr[3];
+            }, 7500);
 
-        setTimeout(() => {
-            document.getElementById('feature-div-2-list-1').innerText = educatorListArr[2];
-            document.getElementById('feature-div-2-list-2').innerText = educatorListArr[3];
-            document.getElementById('feature-div-2-list-3').innerText = educatorListArr[4];
-            document.getElementById('feature-div-2-list-4').innerText = " ";
-            document.getElementById('feature-div-2-list-5').innerText = " ";
-            document.getElementById("educator-img").src = educatorImgArr[4];
-        }, 8000);
+            setTimeout(() => {
+                document.getElementById('feature-div-2-list-1').innerText = educatorListArr[2];
+                document.getElementById('feature-div-2-list-2').innerText = educatorListArr[3];
+                document.getElementById('feature-div-2-list-3').innerText = educatorListArr[4];
+                document.getElementById('feature-div-2-list-4').innerText = " ";
+                document.getElementById('feature-div-2-list-5').innerText = " ";
+                document.getElementById("educator-img").src = educatorImgArr[4];
+            }, 10000);
 
-        setTimeout(() => {
-            document.getElementById('feature-div-2-list-1').innerText = educatorListArr[0];
-            document.getElementById('feature-div-2-list-2').innerText = educatorListArr[1];
-            document.getElementById('feature-div-2-list-3').innerText = educatorListArr[2];
-            document.getElementById('feature-div-2-list-4').innerText = educatorListArr[3];
-            document.getElementById('feature-div-2-list-5').innerText = educatorListArr[4];
-            document.getElementById("educator-img").src = educatorImgArr[2];
-            list2CLickable = true;
-        }, 10000);
+            setTimeout(() => {
+                document.getElementById('feature-div-2-list-1').innerText = educatorListArr[0];
+                document.getElementById('feature-div-2-list-2').innerText = educatorListArr[1];
+                document.getElementById('feature-div-2-list-3').innerText = educatorListArr[2];
+                document.getElementById('feature-div-2-list-4').innerText = educatorListArr[3];
+                document.getElementById('feature-div-2-list-5').innerText = educatorListArr[4];
+                document.getElementById("educator-img").src = educatorImgArr[2];
+                list2CLickable = true;
+            }, 12500);
 
-        autolist2Count = 1;
-    }
+            autolist2Count = 1;
+        }
 
     }
 
@@ -570,30 +679,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
         el.addEventListener("click", () => {
 
-            if(list2CLickable) {
+            if (list2CLickable) {
 
-            featDiv2List.forEach(ele => {
-                ele.setAttribute("style", `
+                featDiv2List.forEach(ele => {
+                    ele.setAttribute("style", `
                 opacity: 0.4;
         color: #124F3F;
         background-color: transparent;
                 `)
-            });
-            el.setAttribute("style", `
+                });
+                el.setAttribute("style", `
             opacity: 1;
             background-color: #BEE8DC;
     border-radius: 3rem;
     color: #124F3F;
             `);
-            document.getElementById("educator-img").remove();
-            let newImg = document.createElement("img");
-            document.getElementById("feature-div-2-img").appendChild(newImg);
-            newImg.classList.add("feature-div-2-img-1", "feat-div-1");
-            newImg.setAttribute("id", "educator-img");
-            elText = el.textContent;
-            let imInd = educatorListArr.indexOf(elText);
-            document.getElementById("educator-img").src = educatorImgArr[imInd];
-        }
+                document.getElementById("educator-img").remove();
+                let newImg = document.createElement("img");
+                document.getElementById("feature-div-2-img").appendChild(newImg);
+                newImg.classList.add("feature-div-2-img-1", "feat-div-1");
+                newImg.setAttribute("id", "educator-img");
+                elText = el.textContent;
+                let imInd = educatorListArr.indexOf(elText);
+                document.getElementById("educator-img").src = educatorImgArr[imInd];
+            }
         });
 
     });
@@ -608,46 +717,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // chat box
-/*
-    let chatSendBtn = document.getElementById("chatSendBtn")
-    chatSendBtn.addEventListener("click", () => {
-        console.log("hi");
-        let inputFromTextBox = document.getElementById("chatBoxText").value;
-        let chatScreen = document.getElementById("chatScreen");
-        let output = document.createElement("textarea")
-        switch (inputFromTextBox) {
-            case "1":
-                output.value = "anwer1";
-                chatScreen.appendChild(output);
-                output.classList.add("chat-screen-text-output");
-                output.focus();
-                output.disabled = true;
-                break;
-            case "2":
-                output.value = "anwer2";
-                chatScreen.appendChild(output);
-                output.classList.add("chat-screen-text-output");
-                output.focus();
-                output.disabled = true;
-                break;
-            case "3":
-                output.value = "anwer3";
-                chatScreen.appendChild(output);
-                output.classList.add("chat-screen-text-output");
-                output.focus();
-                output.disabled = true;
-                break;
-            default:
-                output.value = "Wrong Input provided";
-                chatScreen.appendChild(output);
-                output.classList.add("chat-screen-text-output");
-                output.focus();
-                output.disabled = true;
-                break;
+    /*
+        let chatSendBtn = document.getElementById("chatSendBtn")
+        chatSendBtn.addEventListener("click", () => {
+            console.log("hi");
+            let inputFromTextBox = document.getElementById("chatBoxText").value;
+            let chatScreen = document.getElementById("chatScreen");
+            let output = document.createElement("textarea")
+            switch (inputFromTextBox) {
+                case "1":
+                    output.value = "anwer1";
+                    chatScreen.appendChild(output);
+                    output.classList.add("chat-screen-text-output");
+                    output.focus();
+                    output.disabled = true;
+                    break;
+                case "2":
+                    output.value = "anwer2";
+                    chatScreen.appendChild(output);
+                    output.classList.add("chat-screen-text-output");
+                    output.focus();
+                    output.disabled = true;
+                    break;
+                case "3":
+                    output.value = "anwer3";
+                    chatScreen.appendChild(output);
+                    output.classList.add("chat-screen-text-output");
+                    output.focus();
+                    output.disabled = true;
+                    break;
+                default:
+                    output.value = "Wrong Input provided";
+                    chatScreen.appendChild(output);
+                    output.classList.add("chat-screen-text-output");
+                    output.focus();
+                    output.disabled = true;
+                    break;
 
-        }
-    });
-    */
+            }
+        });
+        */
 
     let chatCloseBtn = document.getElementById("chat-popup-close");
     chatCloseBtn.addEventListener("click", () => {
@@ -659,6 +768,84 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("lis");
         document.getElementById("myForm").style.display = "block";
     });
+
+
+    let nav1 = document.getElementById("about");
+    let nav2 = document.getElementById("feature");
+    let nav3 = document.getElementById("pricing");
+    let nav4 = document.getElementById("team");
+    let nav5 = document.getElementById("connect");
+    let navArray = document.querySelectorAll(".header-li");
+
+
+    console.log(nav1.getBoundingClientRect());
+    console.log(nav2.getBoundingClientRect());
+    console.log(nav3.getBoundingClientRect());
+    console.log(nav4.getBoundingClientRect());
+    console.log(nav5.getBoundingClientRect());
+
+    /*window.addEventListener("scroll", function () {
+        if (isInViewport(nav1)) {
+            let btn = document.getElementById("nav1");
+            btn.classList.add("nav-btn-active");
+        }
+
+        else if (isInViewport(nav2)) {
+            let btn = document.getElementById("nav2");
+            btn.classList.add("nav-btn-active");
+        }
+
+        else if (isInViewport(nav3)) {
+            let btn = document.getElementById("nav3");
+            btn.classList.add("nav-btn-active");
+        }
+
+        else if (isInViewport(nav4)) {
+            let btn = document.getElementById("nav4");
+            btn.classList.add("nav-btn-active");
+        }
+
+        else if (isInViewport(nav5)) {
+            let btn = document.getElementById("nav5");
+            btn.classList.add("nav-btn-active");
+        }
+        else {
+            navArray.forEach((el) => {
+                el.classList.remove("nav-btn-active")
+            })
+        }
+    });*/
+    console.log(nav1.getBoundingClientRect().top);
+    console.log(nav1.getBoundingClientRect().bottom);
+    console.log(document.documentElement.clientHeight);
+
+
+    window.addEventListener("scroll", function () {
+        if (nav1.getBoundingClientRect().top > 1200 && nav1.getBoundingClientRect().bottom < 1900) {
+            let btn = document.getElementById("nav1");
+            btn.classList.add("nav-btn-active");
+        } else if (isInViewport(nav2)) {
+            let btn = document.getElementById("nav2");
+            btn.classList.add("nav-btn-active");
+        } else if (isInViewport(nav3)) {
+            let btn = document.getElementById("nav3");
+            btn.classList.add("nav-btn-active");
+        } else if (isInViewport(nav4)) {
+            let btn = document.getElementById("nav4");
+            btn.classList.add("nav-btn-active");
+        } else if (isInViewport(nav5)) {
+            let btn = document.getElementById("nav5");
+            btn.classList.add("nav-btn-active");
+        } else {
+            navArray.forEach((el) => {
+                el.classList.remove("nav-btn-active")
+            })
+        }
+    });
+
+
+
+
 
 
 

@@ -59,7 +59,14 @@ li a {
     padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
-.header-li:hover {
+.header-li:hover,
+.header-li:active {
+    background-color: #56B49B;
+    border-radius: 3rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.nav-btn-active {
     background-color: #56B49B;
     border-radius: 3rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -285,25 +292,20 @@ li a {
 
 }
 
-
-.featImgOut2 {
-    animation-name: fadeOut2;
-    animation-duration: 2000ms;
-    animation-timing-function: ease-in;
-    animation-iteration-count: 5;
-}
-
-@keyframes fadeOut2 {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0.2;
-    }
+.info {
+    margin-top: .5vh;
+    font-size: .8rem;
+    color: red;
 }
 
 
+.infoR {
+    margin-top: .5vh;
+    font-size: .8rem;
+    color: red;
+    border: none;
+    outline: none;
+}
 
 
 @media (max-width: 1020px) {
@@ -671,9 +673,9 @@ li a {
         color: #000000;
         background-color: #FFF7AB;
         opacity: 1;
-        font: normal normal bold 1.2rem var(--text-font-primary);
+        font: normal normal bold 1.4rem var(--text-font-primary);
         border-radius: 3rem;
-        padding: .4rem 1.3rem .4rem 1.3rem;
+        padding: .5rem 1.5rem .5rem 1.5rem;
         position: relative;
         border: none;
         outline: none;
@@ -718,7 +720,7 @@ li a {
         background-position: top;
         background-size: cover;
         position: static;
-        margin-top: -15vh;
+        margin-top: -18vh;
     }
 
 
@@ -770,6 +772,7 @@ li a {
     .about-div-1-last-text {
         font: normal normal 600 1.8rem var(--text-font-primary);
         color: #000000;
+        margin-top: 7vh;
     }
 
     .about-div-2-1-mid-img,
@@ -1590,9 +1593,9 @@ li a {
         color: #000000;
         background-color: #FFF7AB;
         opacity: 1;
-        font: normal normal bold 1.2rem var(--text-font-primary);
+        font: normal normal bold 1.4rem var(--text-font-primary);
         border-radius: 3rem;
-        padding: .4rem 1.3rem .4rem 1.3rem;
+        padding: .5rem 1.5rem .5rem 1.5rem;
         position: relative;
         border: none;
         outline: none;
@@ -1632,7 +1635,7 @@ li a {
         background-position: top;
         background-size: cover;
         position: static;
-        margin-top: -15vh;
+        margin-top: -18vh;
     }
 
 
@@ -1684,6 +1687,7 @@ li a {
     .about-div-1-last-text {
         font: normal normal 600 1.8rem var(--text-font-primary);
         color: #000000;
+        margin-top: 7vh;
     }
 
     .about-div-2-1-mid-img,
@@ -2505,9 +2509,9 @@ li a {
         color: #000000;
         background-color: #FFF7AB;
         opacity: 1;
-        font: normal normal bold 1.2rem var(--text-font-primary);
+        font: normal normal bold 1.4rem var(--text-font-primary);
         border-radius: 3rem;
-        padding: .5rem 1.4rem .5rem 1.4rem;
+        padding: .5rem 1.5rem .5rem 1.5rem;
         position: relative;
         border: none;
         outline: none;
@@ -2547,7 +2551,7 @@ li a {
         background-position: top;
         background-size: cover;
         position: static;
-        margin-top: -15vh;
+        margin-top: -18vh;
     }
 
 
@@ -2599,6 +2603,7 @@ li a {
     .about-div-1-last-text {
         font: normal normal 600 1.8rem var(--text-font-primary);
         color: #000000;
+        margin-top: 7vh;
     }
 
     .about-div-2-1-mid-img,
@@ -3413,9 +3418,9 @@ li a {
         color: #000000;
         background-color: #FFF7AB;
         opacity: 1;
-        font: normal normal bold 1.2rem var(--text-font-primary);
+        font: normal normal bold 1.4rem var(--text-font-primary);
         border-radius: 3rem;
-        padding: .4rem 1.3rem .4rem 1.3rem;
+        padding: .5rem 1.5rem .5rem 1.5rem;
         position: relative;
         border: none;
         outline: none;
@@ -3455,7 +3460,7 @@ li a {
         background-position: top;
         background-size: cover;
         position: static;
-        margin-top: -15vh;
+        margin-top: -18vh;
     }
 
 
@@ -3507,6 +3512,7 @@ li a {
     .about-div-1-last-text {
         font: normal normal 600 1.8rem var(--text-font-primary);
         color: #000000;
+        margin-top: 7vh;
     }
 
     .about-div-2-1-mid-img,
@@ -4311,9 +4317,9 @@ li a {
         color: #000000;
         background-color: #FFF7AB;
         opacity: 1;
-        font: normal normal bold 1.2rem var(--text-font-primary);
+        font: normal normal bold 1.4rem var(--text-font-primary);
         border-radius: 3rem;
-        padding: .5rem 1.4rem .5rem 1.4rem;
+        padding: .5rem 1.5rem .5rem 1.5rem;
         position: relative;
         border: none;
         outline: none;
@@ -4353,7 +4359,7 @@ li a {
         background-position: top;
         background-size: cover;
         position: static;
-        margin-top: -15vh;
+        margin-top: -18vh;
     }
 
 
@@ -4405,6 +4411,7 @@ li a {
     .about-div-1-last-text {
         font: normal normal 600 1.8rem var(--text-font-primary);
         color: #000000;
+        margin-top: 7vh;
     }
 
     .about-div-2-1-mid-img,
@@ -5209,9 +5216,9 @@ li a {
         color: #000000;
         background-color: #FFF7AB;
         opacity: 1;
-        font: normal normal bold 1.2rem var(--text-font-primary);
+        font: normal normal bold 1.4rem var(--text-font-primary);
         border-radius: 3rem;
-        padding: .5rem 1.4rem .5rem 1.4rem;
+        padding: .5rem 1.5rem .5rem 1.5rem;
         position: relative;
         border: none;
         outline: none;
@@ -5251,7 +5258,7 @@ li a {
         background-position: top;
         background-size: cover;
         position: static;
-        margin-top: -15vh;
+        margin-top: -18vh;
     }
 
 
@@ -5303,6 +5310,7 @@ li a {
     .about-div-1-last-text {
         font: normal normal 600 1.8rem var(--text-font-primary);
         color: #000000;
+        margin-top: 7vh;
     }
 
     .about-div-2-1-mid-img,
@@ -5787,7 +5795,7 @@ li a {
     }
 
     .header-logo {
-      margin-left: 13vw;
+        margin-left: 13vw;
     }
 
 
@@ -6092,7 +6100,7 @@ li a {
         opacity: 1;
         font: normal normal bold 2rem var(--text-font-primary);
         border-radius: 3rem;
-        padding: .5rem 1.4rem .5rem 1.4rem;
+        padding: .5rem 1.5rem .5rem 1.5rem;
         position: relative;
         border: none;
         outline: none;
@@ -6234,7 +6242,7 @@ li a {
     .dotBtn:hover {
         background-color: #ffffff;
     }
-    
+
     .about-slide-btn-active {
         transform: scale(1.2, 1.2);
         background-color: #ffffff;

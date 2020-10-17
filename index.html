@@ -45,11 +45,11 @@
         </div>
         <nav class="header-nav">
             <ul class="header-ul" id="headerUl">
-                <li class="header-li"><a class="nav-btn btn" href="#about">About Us</a></li>
-                <li class="header-li"><a class="nav-btn btn" href="#feature">Features</a></li>
-                <li class="header-li"><a class="nav-btn btn" href="#pricing">Pricing</a></li>
-                <li class="header-li"><a class="nav-btn btn" href="#team">Our Team</a></li>
-                <li class="header-li"><a class="nav-btn btn" href="#connect">Connect</a></li>
+                <li class="header-li" id="nav1"><a class="nav-btn btn" href="#about">About Us</a></li>
+                <li class="header-li" id="nav2"><a class="nav-btn btn" href="#feature">Features</a></li>
+                <li class="header-li" id="nav3"><a class="nav-btn btn" href="#pricing">Pricing</a></li>
+                <li class="header-li" id="nav4"><a class="nav-btn btn" href="#team">Our Team</a></li>
+                <li class="header-li" id="nav5"><a class="nav-btn btn" href="#connect">Connect</a></li>
             </ul>
         </nav>
         <div class="header-div-btn">
@@ -91,12 +91,16 @@
                         <label class="register-form-label" for="registerName">Name</label>
                         <br />
                         <input id="registerName" name="name" type="text">
+                        <p class="infoR" id="registerErName"></p>
                     </div>
+
                     <div class="register-form-div-email">
                         <label class="register-form-label" for="registerEmail">E-mail</label>
                         <br />
                         <input id="registerEmail" name="register-email" type="email">
+                        <p class="infoR" id="registerErEmail"></p>
                     </div>
+
                     <div class="register-form-div-role">
                         <p class="register-form-div-role-p">You describe yourself as ?</p>
                         <div class="checkbox-div">
@@ -106,6 +110,7 @@
                                     id="Educator" class="radio-btn" name="role" value="Educator">Educator</label>
                             <label for="Institute" class="register-form-div-checkbox-label"><input type="radio"
                                     id="Institute" class="radio-btn" name="role" value="Institute">Institute</label>
+                            <p class="infoR" id="registerErRole"></p>
                         </div>
                     </div>
                 </div>
@@ -374,11 +379,13 @@
                             <label class="form-label" for="name">Name</label>
                             <br />
                             <input id="name" name="name" type="text">
+                            <p class="info" id="contactName"></p>
                         </div>
                         <div class="contact-form-div-email">
                             <label class="form-label" for="email">E-mail</label>
                             <br />
                             <input id="email" name="email" type="email">
+                            <p class="info" id="contactEmail"></p>
                         </div>
                     </div>
                     <div class="contact-form-div-message">
