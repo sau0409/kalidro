@@ -12,6 +12,7 @@ body {
     overflow-x: hidden;
 }
 
+
 .btn {
     border: none;
     outline: none;
@@ -117,7 +118,7 @@ li a {
     outline: none;
     transform-origin: center;
     transform: scale(1, 1);
-    transition-property: transform;
+    transition-property: transform border-radius width;
     transition-duration: 200ms;
     background-color: var(--text-color-primary-dark);
 }
@@ -128,7 +129,9 @@ li a {
 
 .about-slide-btn-active {
     transform: scale(1.5, 1.5);
-    background-color: #BEE8DC;
+    background-color: #b3abff;
+    border-radius: 3rem;
+    width: 2vw;
 }
 
 #about-slider-div {
@@ -308,6 +311,12 @@ li a {
     outline: none;
 }
 
+.pageOverlay {
+    background-color: black;
+    opacity: .2;
+    z-index: 4;
+}
+
 
 @media (max-width: 1020px) {
 
@@ -485,10 +494,10 @@ li a {
         width: 25%;
         height: auto;
         position: fixed;
-        bottom: 30%;
+        bottom: 25%;
         right: 37.5%;
 
-        z-index: 4;
+        z-index: 10;
         padding: .7rem;
 
         background: url(../images/home/register-box.png) no-repeat;
@@ -1031,7 +1040,7 @@ li a {
 
     .team-main {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         max-width: auto;
         height: auto;
         justify-items: center;
@@ -1222,7 +1231,7 @@ li a {
 @media (max-width: 1320px) {
 
     :root {
-        font-size: 1vw;
+        font-size: .9vw;
     }
 
     .header {
@@ -1396,10 +1405,10 @@ li a {
         height: auto;
         background-color: #E2FEF6;
         position: fixed;
-        bottom: 30%;
+        bottom: 25%;
         right: 37.5%;
 
-        z-index: 4;
+        z-index: 10;
         padding: .7rem;
 
         background: url(../images/home/register-box.png) no-repeat;
@@ -1946,7 +1955,7 @@ li a {
 
     .team-main {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         max-width: auto;
         height: auto;
         justify-items: center;
@@ -2311,10 +2320,10 @@ li a {
         width: 25%;
         height: auto;
         position: fixed;
-        bottom: 30%;
+        bottom: 25%;
         right: 37.5%;
 
-        z-index: 4;
+        z-index: 10;
         padding: .7rem;
 
         background: url(../images/home/register-box.png) no-repeat;
@@ -2862,7 +2871,7 @@ li a {
 
     .team-main {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         max-width: auto;
         height: auto;
         justify-items: center;
@@ -3052,7 +3061,7 @@ li a {
 @media (max-width: 1920px) {
 
     :root {
-        font-size: 1.1vw;
+        font-size: 1vw;
     }
 
     .header {
@@ -3225,10 +3234,10 @@ li a {
         width: 25%;
         height: auto;
         position: fixed;
-        bottom: 30%;
+        bottom: 25%;
         right: 37.5%;
         padding: .7rem;
-        z-index: 4;
+        z-index: 10;
         background: url(../images/home/register-box.png) no-repeat;
         background-size: contain;
         background-position: top right;
@@ -3770,7 +3779,7 @@ li a {
 
     .team-main {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         max-width: auto;
         height: auto;
         justify-items: center;
@@ -3960,7 +3969,7 @@ li a {
 @media (max-width: 2220px) {
 
     :root {
-        font-size: 1.2vw;
+        font-size: 1.1vw;
     }
 
     .header {
@@ -4133,10 +4142,10 @@ li a {
         width: 25%;
         height: auto;
         position: fixed;
-        bottom: 30%;
+        bottom: 25%;
         right: 37.5%;
         padding: .7rem;
-        z-index: 4;
+        z-index: 10;
         background: url(../images/home/register-box.png) no-repeat;
         background-size: contain;
         background-position: top right;
@@ -4669,7 +4678,7 @@ li a {
 
     .team-main {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         max-width: auto;
         height: auto;
         justify-items: center;
@@ -5032,10 +5041,10 @@ li a {
         width: 25%;
         height: auto;
         position: fixed;
-        bottom: 30%;
+        bottom: 25%;
         right: 37.5%;
         padding: .7rem;
-        z-index: 4;
+        z-index: 10;
         background: url(../images/home/register-box.png) no-repeat;
         background-size: contain;
         background-position: top right;
@@ -5564,7 +5573,7 @@ li a {
 
     .team-main {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         max-width: auto;
         height: auto;
         justify-items: center;
@@ -5914,7 +5923,7 @@ li a {
         bottom: 20%;
         right: 8%;
         padding: .7rem;
-        z-index: 4;
+        z-index: 10;
         background: url(../images/home/register-box.png) no-repeat;
         background-size: contain;
         background-position: top right;

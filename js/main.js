@@ -758,7 +758,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         */
 
-    let chatCloseBtn = document.getElementById("chat-popup-close");
+   /* let chatCloseBtn = document.getElementById("chat-popup-close");
     chatCloseBtn.addEventListener("click", () => {
         document.getElementById("myForm").style.display = "none";
     });
@@ -767,7 +767,7 @@ document.addEventListener("DOMContentLoaded", () => {
     chatBtn.addEventListener("click", () => {
         console.log("lis");
         document.getElementById("myForm").style.display = "block";
-    });
+    });*/
 
 
     let nav1 = document.getElementById("about");
