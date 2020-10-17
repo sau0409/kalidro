@@ -123,10 +123,6 @@ li a {
     background-color: var(--text-color-primary-dark);
 }
 
-.dotBtn:hover {
-    background-color: #BEE8DC;
-}
-
 .about-slide-btn-active {
     transform: scale(1.5, 1.5);
     background-color: #b3abff;
@@ -4868,7 +4864,7 @@ li a {
 @media (min-width: 2220px) {
 
     :root {
-        font-size: 1.3vw;
+        font-size: 1.2vw;
     }
 
     .header {
