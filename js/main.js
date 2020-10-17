@@ -821,7 +821,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     window.addEventListener("scroll", function () {
-        if (nav1.getBoundingClientRect().top > 1200 && nav1.getBoundingClientRect().bottom < 1900) {
+        if (isInViewport(nav1)) {
             let btn = document.getElementById("nav1");
             btn.classList.add("nav-btn-active");
         } else if (isInViewport(nav2)) {
