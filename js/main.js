@@ -367,7 +367,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
+    const arrowRight1 = document.getElementById('about-arrow-right-1');
+    const arrowRight2 = document.getElementById('about-arrow-right-2');
+    const arrowLeft1 = document.getElementById('about-arrow-left-1');
+    const arrowLeft2 = document.getElementById('about-arrow-left-2');
+    const dot1 = document.getElementById('about-slideBtn-1');
+    const dot2 = document.getElementById('about-slideBtn-2');
+    const dot3 = document.getElementById('about-slideBtn-3');
+    arrowRight1.addEventListener('click', ()=> {
+        console.log('Hello')
+        dot2.click();
+    });
+    arrowRight2.addEventListener('click', ()=> {
+        console.log('Hello')
+        dot3.click();
+    });
+    arrowLeft1.addEventListener('click', ()=> {
+        console.log('Hello')
+        dot1.click();
+    });
+    arrowLeft2.addEventListener('click', ()=> {
+        console.log('Hello')
+        dot2.click();
+    });
 
 
     // feature section interaction
