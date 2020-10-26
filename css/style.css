@@ -61,6 +61,12 @@ li a {
   padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
+.header-li-active {
+  background-color: #56b49b;
+  border-radius: 3rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
 .nav-btn-active {
   background-color: #56b49b;
   border-radius: 3rem;

@@ -1,7 +1,6 @@
 //on document load add a listner
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("entering in js file");
 
   var firebaseConfig = {
     apiKey: "AIzaSyA7lSzxaBmyf8a15RwiLbofWOjbsqEa1y4",
@@ -43,15 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
           }
         );
-        console.log("syncRes");
-
-        console.log(syncRes);
       } catch (err) {
-        console.log("in catch");
         console.log(err);
       }
     } else {
-      console.log("you are offline");
+      window.alert('You are offline, please check your connection');
     }
   }
 
@@ -116,9 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let validateNameStatus = validateName(name);
     let validateEmailStatus = validateEmail(email);
     let validateRoleStatus = validateRole(role);
-    console.log(validateNameStatus);
-    console.log(validateEmailStatus);
-    console.log(validateRoleStatus);
     if (
       typeof validateNameStatus === "string" &&
       typeof validateEmailStatus === "string" &&
@@ -214,7 +206,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   let registerBtns = document.querySelectorAll(".register-button");
-  console.log(registerBtns);
   registerBtns.forEach((el, index) => {
     el.addEventListener("click", () => {
       moveRegisterBox();
@@ -397,6 +388,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  //slide with arrow buttons
   const arrowRight1 = document.getElementById("about-arrow-right-1");
   const arrowRight2 = document.getElementById("about-arrow-right-2");
   const arrowLeft1 = document.getElementById("about-arrow-left-1");
@@ -405,19 +397,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const dot2 = document.getElementById("about-slideBtn-2");
   const dot3 = document.getElementById("about-slideBtn-3");
   arrowRight1.addEventListener("click", () => {
-    console.log("Hello");
     dot2.click();
   });
   arrowRight2.addEventListener("click", () => {
-    console.log("Hello");
     dot3.click();
   });
   arrowLeft1.addEventListener("click", () => {
-    console.log("Hello");
     dot1.click();
   });
   arrowLeft2.addEventListener("click", () => {
-    console.log("Hello");
     dot2.click();
   });
 
@@ -736,7 +724,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function myFeatureList2Move() {
     if (autolist2Count === 0) {
       setTimeout(() => {
-        console.log("slide1");
         document.getElementById("feature-div-2-list-1").innerText = " ";
         document.getElementById("feature-div-2-list-2").innerText = " ";
         document.getElementById("feature-div-2-list-3").innerText =
@@ -758,7 +745,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 100);
 
       setTimeout(() => {
-        console.log("slide2");
         document.getElementById("feature-div-2-list-1").innerText = " ";
         document.getElementById("feature-div-2-list-2").innerText =
           educatorListArr[0];
@@ -1062,8 +1048,7 @@ document.addEventListener("DOMContentLoaded", () => {
     chatBtn.addEventListener("click", () => {
         console.log("lis");
         document.getElementById("myForm").style.display = "block";
-    });*/
-
+    });
   let nav1 = document.getElementById("about");
   let nav2 = document.getElementById("feature");
   let nav3 = document.getElementById("pricing");
@@ -1108,30 +1093,55 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         }
     });*/
-  console.log(nav1.getBoundingClientRect().top);
-  console.log(nav1.getBoundingClientRect().bottom);
-  console.log(document.documentElement.clientHeight);
+
+  let nav1 = document.getElementById("about");
+  let nav2 = document.getElementById("feature");
+  let nav3 = document.getElementById("pricing");
+  let nav4 = document.getElementById("team");
+  let nav5 = document.getElementById("connect");
+  let navArray = document.querySelectorAll(".header-li");
 
   window.addEventListener("scroll", function () {
     if (isInViewport(nav1)) {
       let btn = document.getElementById("nav1");
-      btn.classList.add("nav-btn-active");
+      btn.classList.add("header-li-active");
     } else if (isInViewport(nav2)) {
       let btn = document.getElementById("nav2");
-      btn.classList.add("nav-btn-active");
+      btn.classList.add("header-li-active");
     } else if (isInViewport(nav3)) {
       let btn = document.getElementById("nav3");
-      btn.classList.add("nav-btn-active");
+      btn.classList.add("header-li-active");
     } else if (isInViewport(nav4)) {
       let btn = document.getElementById("nav4");
-      btn.classList.add("nav-btn-active");
+      btn.classList.add("header-li-active");
     } else if (isInViewport(nav5)) {
       let btn = document.getElementById("nav5");
-      btn.classList.add("nav-btn-active");
+      btn.classList.add("header-li-active");
     } else {
       navArray.forEach((el) => {
-        el.classList.remove("nav-btn-active");
+        el.classList.remove("header-li-active");
       });
     }
   });
+
+  //logic for nav buttons
+  let navLi = document.querySelectorAll('.header-li');
+  navLi.forEach((btn)=> {
+      btn.addEventListener('click', ()=> {
+          console.log('clicked');
+          btn.classList.add('header-li-active'); 
+          if(btn.id == 'nav2') { // on click on feature button starting feature list movement
+            myFeatureList1Move();
+          }
+          navLi.forEach((btn2)=> {
+            console.log(btn.id);
+            console.log(btn2.id);
+            if(btn2.id !== btn.id) {
+                btn2.classList.remove('header-li-active');
+            }
+        })
+      })
+  })
+
+
 });
