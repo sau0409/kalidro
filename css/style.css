@@ -231,11 +231,13 @@ li a {
 }
 
 .feature-div-1-list:active,
+.feature-div-3-list:active,
 .feature-div-2-list:active {
   color: coral;
 }
 
 .feature-div-1-list-3,
+.feature-div-3-list-3,
 .feature-div-2-list-3 {
   background-color: #bee8dc;
   padding: 0.2rem;
@@ -245,6 +247,8 @@ li a {
 
 .feature-div-1-list-2,
 .feature-div-1-list-4,
+.feature-div-3-list-2,
+.feature-div-3-list-4,
 .feature-div-2-list-2,
 .feature-div-2-list-4 {
   opacity: 0.3;
@@ -252,12 +256,15 @@ li a {
 
 .feature-div-1-list-5,
 .feature-div-1-list-1,
+.feature-div-3-list-5,
+.feature-div-3-list-1,
 .feature-div-2-list-5,
 .feature-div-2-list-1 {
   opacity: 0.2;
 }
 
 .feature-div-1-img-1,
+.feature-div-3-img-1,
 .feature-div-2-img-1 {
   width: 30vw;
   height: 45vh;
