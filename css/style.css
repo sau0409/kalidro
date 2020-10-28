@@ -1157,6 +1157,7 @@ li a {
 
   .footer-items-div {
     width: 100vw;
+    padding-top: 5vh;
   }
 
   .footer-item-4-social {
@@ -1165,6 +1166,7 @@ li a {
     max-width: 5vw;
     max-height: 5vh;
     padding-right: 1vw;
+    margin-top: -2vh;
   }
 
   .copyright {
@@ -1180,6 +1182,10 @@ li a {
 
   .footer-item-2-text-2 {
     font: normal normal bold 1rem var(--text-font-primary);
+    margin-top: -2vh;
+  }
+  .footer-item-2-text-1-f{
+    font: normal normal bold 2rem var(--text-font-primary);
   }
 
   .footer-items {
@@ -1192,11 +1198,13 @@ li a {
   .footer-items23-cont {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
   }
 
   .footer-item-2,
   .footer-item-3 {
-    display: inline;
+    text-align: start;
   }
 }
 
