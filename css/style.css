@@ -278,8 +278,6 @@ li a {
   z-index: 4;
 }
 
-
-
 @media (max-width: 600px) and (min-width: 300px) {
   :root {
     font-size: 1.6vh;
@@ -292,6 +290,64 @@ li a {
     justify-items: center;
     align-items: center;
     position: fixed;
+  }
+
+  .menu {
+    height: 100vh;
+    width: 100vw;
+    background-color:#E3FAFF;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    display: none;
+    animation-name: fadeIn;
+    animation-duration: 300ms;
+    animation-direction: reverse;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .menu-btn-img {
+    background-color: #124f3f;
+    opacity: 0.8;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .menu-a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .menu-li {
+    cursor: pointer;
+    font: normal normal 600 2rem var(--text-font-primary);
+    color: #fff7ab;
+    text-decoration: none;
+  }
+
+  .menu-items {
+    margin-top: 50%;
+  }
+  .menu-close-btn {
+    position: fixed;
+    right: 2vw;
+    top: 2vh;
+  }
+
+  .menu-close {
+    background-color: transparent;
   }
 
   li a {
@@ -525,15 +581,15 @@ li a {
 
   .register-form-label {
     background-color: #e2fef6;
-    font: normal normal normal 0.9rem var(--text-font-primary);
+    font: normal normal normal 1rem var(--text-font-primary);
   }
 
   .register-form-div-role-p {
-    font: normal normal normal 0.8rem var(--text-font-primary);
+    font: normal normal normal 0.9rem var(--text-font-primary);
   }
 
   .register-form-div-checkbox-label {
-    font: normal normal normal 0.9rem var(--text-font-primary);
+    font: normal normal normal 1rem var(--text-font-primary);
   }
 
   .radio-btn {
@@ -615,12 +671,12 @@ li a {
   }
 
   .home-div-text-1 {
-    font: normal normal bold 2.2rem var(--text-font-primary);
+    font: normal normal bold 2rem var(--text-font-primary);
     color: white;
   }
 
   .home-div-text-2 {
-    font: normal normal bold 5rem var(--text-font-secondary);
+    font: normal normal bold 4rem var(--text-font-secondary);
     color: #fff7ab;
     margin-top: -5vh;
   }
@@ -650,7 +706,7 @@ li a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--text-color-primary-light);
+    background-color: #e2fef6;
     z-index: -1;
     transition: transform 300ms;
     transform: scaleX(1) skew(0deg);
@@ -674,7 +730,7 @@ li a {
     background-position: top;
     background-size: cover;
     position: static;
-    margin-top: -12vh;
+    margin-top: -15vh;
   }
 
   .about-place {
@@ -682,7 +738,7 @@ li a {
   }
 
   .about-div-1-main-text {
-    font: normal normal bold 1.9rem var(--text-font-secondary);
+    font: normal normal bold 1.5rem var(--text-font-secondary);
     letter-spacing: 0px;
     color: var(--text-color-primary-dark);
   }
@@ -743,8 +799,8 @@ li a {
   .about-div-2-1-mid-img,
   .about-div-2-2-mid-img,
   .about-div-2-3-mid-img {
-    width: 50vw;
-    height: 30vh;
+    width: 40vw;
+    height: 20vh;
     position: relative;
   }
 
@@ -754,7 +810,7 @@ li a {
     right: 5vw;
     cursor: pointer;
     width: 5vw;
-    height: 5vh;
+    height: 3vh;
   }
   .about-div-2-1-mid-arrow-left {
     position: absolute;
@@ -762,13 +818,13 @@ li a {
     left: 5vw;
     cursor: pointer;
     width: 5vw;
-    height: 5vh;
+    height: 3vh;
   }
 
   .about-div-2-1-mid-text-1,
   .about-div-2-2-mid-text-1,
   .about-div-2-3-mid-text-1 {
-    font: normal normal bold 2.1rem var(--text-font-primary);
+    font: normal normal bolder 2.1rem var(--text-font-primary);
     letter-spacing: 0px;
     color: var(--text-color-primary-dark);
   }
@@ -779,6 +835,7 @@ li a {
     font: normal normal bold 1rem var(--text-font-primary);
     letter-spacing: 0px;
     color: var(--text-color-primary-dark);
+    margin-top: -2vh;
   }
 
   #about-slider-div {
@@ -820,20 +877,20 @@ li a {
 
   .about-div-2-last-btn {
     position: absolute;
-    bottom: 5vh;
+    bottom: 15vh;
     left: 38vw;
     z-index: 4;
   }
 
   .feature-div-btn {
-    padding-top: 20vh;
+    padding-top: 10vh;
   }
 
   .feature-slide-btn {
     letter-spacing: 0px;
     font: normal normal bold 1.2rem var(--text-font-primary);
     color: var(--text-color-primary-dark);
-    margin: 0rem .5rem 0rem .5rem;
+    margin: 0rem 0.5rem 0rem 0.5rem;
     padding: 0.3rem 1rem 0.3rem 1rem;
     background: transparent;
     border-radius: 3rem;
@@ -908,7 +965,7 @@ li a {
   .feature-div-2-list,
   .feature-div-3-list {
     text-align: center;
-    font: normal normal 600 3vw/4vh var(--text-font-primary);
+    font: normal normal 900 3.5vw/4vh var(--text-font-primary);
     letter-spacing: 0px;
     border-radius: 3rem;
     height: 4vh;
@@ -1065,7 +1122,7 @@ li a {
       url(../images/connect/connect-bcg.png) no-repeat;
     background-size: 110% 50%, 100% 80%;
     display: grid;
-    grid-template-rows: 1fr .1fr;
+    grid-template-rows: 1fr 0.1fr;
     justify-items: center;
     align-items: flex-end;
     row-gap: 10vh;
@@ -1163,10 +1220,13 @@ li a {
   .footer-item-4-social {
     background-color: transparent;
     border: none;
-    max-width: 5vw;
-    max-height: 5vh;
-    padding-right: 1vw;
+    max-width: 7vw;
+    max-height: 7vh;
+    padding-right: 5vw;
     margin-top: -2vh;
+  }
+  .footer-item-4-social-btns {
+    margin-left: 5vw;
   }
 
   .copyright {
@@ -1184,8 +1244,8 @@ li a {
     font: normal normal bold 1rem var(--text-font-primary);
     margin-top: -2vh;
   }
-  .footer-item-2-text-1-f{
-    font: normal normal bold 2rem var(--text-font-primary);
+  .footer-item-2-text-1-f {
+    font: normal normal 400 2rem var(--text-font-primary);
   }
 
   .footer-items {
@@ -1194,6 +1254,9 @@ li a {
   }
   .footer-items2 {
     color: white;
+  }
+  .footer-item-1 {
+    margin-top: 5vh;
   }
   .footer-items23-cont {
     display: grid;
@@ -1222,6 +1285,9 @@ li a {
     position: fixed;
   }
 
+  .header-div-menu-btn {
+    display: none;
+  }
   li a {
     font: normal normal 600 1rem var(--text-font-primary);
   }
@@ -2121,6 +2187,10 @@ li a {
     justify-items: center;
     align-items: center;
     position: fixed;
+  }
+
+  .header-div-menu-btn {
+    display: none;
   }
 
   li a {
@@ -3024,6 +3094,10 @@ li a {
     position: fixed;
   }
 
+  .header-div-menu-btn {
+    display: none;
+  }
+
   li a {
     font: normal normal 600 1rem var(--text-font-primary);
   }
@@ -3923,6 +3997,10 @@ li a {
     justify-items: center;
     align-items: center;
     position: fixed;
+  }
+
+  .header-div-menu-btn {
+    display: none;
   }
 
   li a {
@@ -4826,6 +4904,10 @@ li a {
     position: fixed;
   }
 
+  .header-div-menu-btn {
+    display: none;
+  }
+
   li a {
     font: normal normal 600 1rem var(--text-font-primary);
   }
@@ -5725,6 +5807,10 @@ li a {
     position: fixed;
   }
 
+  .header-div-menu-btn {
+    display: none;
+  }
+
   li a {
     font: normal normal 600 1rem var(--text-font-primary);
   }
@@ -6622,6 +6708,10 @@ li a {
     justify-items: center;
     align-items: center;
     position: fixed;
+  }
+
+  .header-div-menu-btn {
+    display: none;
   }
 
   li a {

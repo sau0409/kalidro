@@ -1144,4 +1144,28 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
 
+  //mobile-header
+
+  let menu = document.getElementById('menu');
+
+  let menuBtn = document.getElementById('menuBtn');
+  menuBtn.addEventListener('click', ()=> {
+    console.log('pressed-0')
+    menu.setAttribute('style', `display: block;`);
+  })
+
+  let menuClose = document.getElementById('menu-close');
+  menuClose.addEventListener('click', ()=> {
+    menu.setAttribute('style', `display: none;`);
+  })
+
+  let menus = document.querySelectorAll('.menu-li');
+  menus.forEach(el=>{
+    el.addEventListener('click', ()=> {
+      menu.setAttribute('style', `display: none;`);
+  })
+
+  
+});
+
 });
